@@ -1,6 +1,16 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Head, Link } from '@inertiajs/react';
+
+
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import HeroSection from '../components/landing-page/HeroSection';
+import USPSection from '../components/landing-page/USPSection';
+import ServiceOverview from '../components/landing-page/ServiceOverview';
+import Testimonials from '../components/landing-page/Testimonials';
+import LocationFocus from '../components/landing-page/LocationFocus';
 
 export default function Welcome() {
     return (
@@ -10,24 +20,15 @@ export default function Welcome() {
                 <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
             </Head>
 
-            <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-6">
-                <Card className="w-full max-w-md rounded-2xl shadow-xl">
-                    <CardContent className="p-8 text-center">
-                        <h1 className="mb-4 text-4xl font-bold text-gray-800">THIS IS MY PERSONAL BOILERPLATE</h1>
-                        <p className="mb-6 text-lg text-gray-600">Simple and straightforward starter template.</p>
-
-                        <div className="flex justify-center gap-4">
-                            <Button variant="default" asChild>
-                                <Link href={route('auth.login')}>Login</Link>
-                            </Button>
-
-                            <Button variant="outline" asChild>
-                                <Link href={route('auth.register')}>Register</Link>
-                            </Button>
-                        </div>
-                    </CardContent>
-                </Card>
-            </div>
+            <Header />
+            <main>
+                <HeroSection />
+                <USPSection />
+                <ServiceOverview />
+                <Testimonials />
+                <LocationFocus />
+            </main>
+            <Footer />
         </>
     );
 }

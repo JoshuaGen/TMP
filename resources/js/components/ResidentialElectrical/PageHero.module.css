@@ -1,0 +1,42 @@
+.pageHero {
+  background: #f0f0f0;
+  padding: 4rem 1.5rem 3rem 1.5rem;
+  text-align: center;
+}
+.title {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 900;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.intro {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.ctaButton {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+  display: inline-block;
+}
+.ctaButton:hover {
+  background: #0056b3;
+}
+@media (max-width: 640px) {
+  .pageHero { padding: 2rem 0.5rem 1.5rem 0.5rem; }
+  .title { font-size: 1.7rem; }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .title { font-size: 2rem; }
+}

@@ -1,0 +1,127 @@
+
+.serviceOverview {
+  background: #f0f0f0;
+  padding: 4rem 0 4rem 0;
+}
+
+.serviceHeader {
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+  text-align: left;
+}
+.serviceHeading {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #181d1b;
+  margin-bottom: 0.5rem;
+}
+.serviceSubheading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #6b6f76;
+  margin-bottom: 0.5rem;
+}
+
+.serviceGrid {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.serviceCard {
+  background: #fff;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(51,51,51,0.03);
+  min-width: 320px;
+  max-width: 340px;
+  flex: 0 0 320px;
+  padding: 2.2rem 1.5rem 2.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.serviceCard:last-child {
+  background: #f4f3ed;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 0.8rem;
+}
+
+.serviceIcon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #181d1b;
+}
+
+.serviceTitle {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 900;
+  color: #181d1b;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.serviceDesc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.01rem;
+  color: #444;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.serviceArrowBtn {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f4f4f4;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.serviceArrowBtn:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 900px) {
+  .serviceGrid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .serviceCard {
+    min-width: 0;
+    max-width: 100%;
+    padding: 2rem 1.2rem 2rem 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .serviceOverview {
+    padding: 2rem 0 2rem 0;
+  }
+  .serviceHeader {
+    margin-bottom: 1.2rem;
+  }
+  .serviceCard {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+}

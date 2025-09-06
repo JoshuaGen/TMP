@@ -1,0 +1,81 @@
+
+.heroSection {
+  width: 100vw;
+  min-height: 70vh;
+  background: url('/hero-image.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.heroBgOverlay {
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient(180deg, rgba(51,51,51,0.7) 0%, rgba(51,51,51,0.3) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.heroTitle {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 3.5rem;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: #f0f0f0;
+}
+
+.ctaButton {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(51,51,51,0.10);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.ctaButton:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 640px) {
+  .heroContent {
+    padding: 2rem 0.5rem;
+  }
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  .heroSection, .heroBgOverlay {
+    min-height: 50vh;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .heroSection, .heroBgOverlay {
+    min-height: 60vh;
+  }
+}

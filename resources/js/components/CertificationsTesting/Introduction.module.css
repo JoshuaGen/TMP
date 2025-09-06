@@ -1,0 +1,27 @@
+.introduction {
+  background: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.heading {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 900;
+  color: #007BFF;
+  margin-bottom: 1rem;
+}
+.text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .introduction { padding: 1.5rem 0.5rem; }
+  .heading { font-size: 1.3rem; }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .heading { font-size: 1.6rem; }
+}

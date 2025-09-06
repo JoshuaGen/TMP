@@ -1,0 +1,65 @@
+.carouselSection {
+  background: #fff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+.heading {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 900;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.testimonialCard {
+  background: #f0f0f0;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(51,51,51,0.06);
+  padding: 2rem 1.5rem;
+  min-width: 260px;
+  max-width: 400px;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonialText {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+.testimonialName {
+  color: #007BFF;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+.carouselBtn {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carouselBtn:hover {
+  background: #0056b3;
+}
+@media (max-width: 640px) {
+  .carouselSection { padding: 2rem 0.5rem; }
+  .testimonialCard { padding: 1.25rem 0.75rem; }
+  .carouselWrapper { gap: 1rem; }
+}

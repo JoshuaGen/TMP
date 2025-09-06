@@ -1,0 +1,58 @@
+
+.locationFocus {
+  background: #fff;
+  padding: 4rem 1.5rem;
+}
+
+.locationGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.locationText {
+  flex: 1;
+  text-align: left;
+  max-width: 500px;
+}
+.locationTitle {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 900;
+  color: #333333;
+  margin-bottom: 0.75rem;
+}
+.locationDesc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+}
+.locationIllustration {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .locationGrid {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .locationText {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .locationFocus {
+    padding: 2rem 0.5rem;
+  }
+  .locationTitle {
+    font-size: 1.2rem;
+  }
+}

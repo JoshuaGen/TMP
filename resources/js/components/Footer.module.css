@@ -1,0 +1,102 @@
+.footer {
+  width: 100%;
+  background: #333333;
+  color: #f0f0f0;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+.footerCol {
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.footerLogo {
+  width: 48px; height: 48px;
+  background: #a4a4a4;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.footerHeading {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.footerLink {
+  font-family: 'Open Sans', sans-serif;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+.footerLink:hover {
+  color: #007BFF;
+}
+.footerDesc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+.footerContact {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-bottom: 0.5rem;
+}
+.footerCta {
+  background: transparent;
+  border: 1.5px solid #a4a4a4;
+  color: #f0f0f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.footerCta:hover {
+  background: #a4a4a4;
+  color: #333333;
+}
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.socialIcon {
+  width: 24px; height: 24px;
+  color: #a4a4a4;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: none;
+}
+.socialIcon:hover {
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .footer { flex-direction: column; gap: 2rem; padding: 2.5rem 1rem; }
+}
+@media (max-width: 640px) {
+  .footer { flex-direction: column; gap: 2rem; padding: 2rem 1rem; }
+  .footerCol { max-width: 100%; }
+}

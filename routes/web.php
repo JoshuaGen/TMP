@@ -90,3 +90,15 @@ Route::middleware([UserMiddleware::class])->group(function () {
   Route::put('user/settings/profile', [UserSettingsController::class, 'updateProfile'])->name('user.settings.updateProfile');
   Route::put('user/settings/password', [UserSettingsController::class, 'updatePassword'])->name('user.settings.updatePassword');
 });
+
+use App\Http\Controllers\ResidentialElectricalController;
+Route::get('ResidentialElectrical', [ResidentialElectricalController::class, 'index'])->name('residential.electrical');
+
+use App\Http\Controllers\TestimonialsCaseStudiesController;
+use App\Http\Controllers\CertificationsTestingController;
+use App\Http\Controllers\FreeQuoteController;
+use App\Http\Controllers\ProjectsController;
+Route::get('TestimonialsCaseStudies', [TestimonialsCaseStudiesController::class, 'index'])->name('testimonials.casestudies');
+Route::get('CertificationsTesting', [CertificationsTestingController::class, 'index'])->name('certifications.testing');
+Route::get('FreeQuote', [FreeQuoteController::class, 'index'])->name('free.quote');
+Route::get('Projects', [ProjectsController::class, 'index'])->name('projects');

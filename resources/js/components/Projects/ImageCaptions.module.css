@@ -1,0 +1,32 @@
+.imageCaptions {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.heading {
+  font-family: 'Reaktiv Heavy Italic', sans-serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 900;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.captionList {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.caption {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #a4a4a4;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .imageCaptions { padding: 1rem 0.5rem; }
+  .heading { font-size: 1rem; }
+}

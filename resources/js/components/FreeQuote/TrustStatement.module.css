@@ -1,0 +1,16 @@
+.trustStatement {
+  background: #f0f0f0;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+.text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+@media (max-width: 640px) {
+  .trustStatement { padding: 1rem 0.5rem; }
+}
