@@ -11,6 +11,7 @@ import USPSection from '../components/landing-page/USPSection';
 import ServiceOverview from '../components/landing-page/ServiceOverview';
 import Testimonials from '../components/landing-page/Testimonials';
 import LocationFocus from '../components/landing-page/LocationFocus';
+import GetQuoteSection from '../components/landing-page/GetQuoteSection';
 
 export default function Welcome() {
     return (
@@ -27,6 +28,7 @@ export default function Welcome() {
                 <ServiceOverview />
                 <Testimonials />
                 <LocationFocus />
+                <GetQuoteSection />
             </main>
             <Footer />
         </>

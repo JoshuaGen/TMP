@@ -1,141 +1,92 @@
-/* Section container */
 .uspSection {
   background: #fff;
-  padding: 0 0 4rem 0;
+  padding: 5rem 0 5rem 0;
 }
 
-  /* Section heading and subheading */
-  .uspHeader {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 0 1.5rem 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  .uspHeading {
-    font-family: 'Reaktiv Heavy Italic', sans-serif;
-    font-size: 2.7rem;
-    font-weight: 900;
-    color: #181d1b;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-    text-align: left;
-  }
-  .uspSubheading {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
-    color: #6b6f76;
-    max-width: 420px;
-    margin-left: 2.5rem;
-    margin-top: 0.5rem;
-    text-align: left;
-  }
+.uspGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.2rem;
+  max-width: 1800px; /* Increased further */
+  margin: 0 auto;
+  align-items: stretch;
+}
 
-  /* Card grid */
+.uspCard {
+  background: #fafbfc;
+  border-radius: 1.4rem;
+  box-shadow: none;
+  padding: 1.3rem 0.7rem 1.3rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: 140px;
+  position: relative;
+  transition: box-shadow 0.18s, background 0.18s;
+}
+.uspCardHighlight {
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  z-index: 1;
+}
+.uspIcon {
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uspIcon svg {
+  width: 32px;
+  height: 32px;
+}
+.uspIcon svg * {
+  stroke: #222 !important;
+  fill: #fff !important;
+}
+.uspTitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.22rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+.uspDesc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.82rem;
+  color: #888;
+  text-align: center;
+  margin-bottom: 0.7rem;
+}
+.dotPurple, .dotBlue, .dotOrange, .dotRed {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: auto;
+  background: #222;
+  box-shadow: 0 0 6px #0002;
+}
+
+@media (max-width: 900px) {
   .uspGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
-
-  /* Card styles */
+}
+@media (max-width: 640px) {
+  .uspSection {
+    padding: 2.5rem 0.5rem;
+  }
+  .uspGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
   .uspCard {
-    background: #fff;
-    border: 1.5px solid #e5e5e5;
-    border-radius: 1.2rem;
-    box-shadow: 0 2px 8px rgba(51,51,51,0.03);
-    padding: 2.7rem 2rem 2.2rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    min-height: 260px;
-    transition: box-shadow 0.2s, border 0.2s;
+    padding: 0.9rem 0.5rem 0.9rem 0.5rem;
+    min-height: 110px;
   }
-  .uspCard:last-child {
-    background: #f4f3ed;
-    border-top-right-radius: 3.5rem;
-    border-bottom-right-radius: 0.8rem;
-  }
-
-  /* Icon styles */
-  .uspIcon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 1.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Card heading */
-  .uspTitle {
-    font-family: 'Reaktiv Heavy Italic', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 900;
-    color: #181d1b;
-    margin-bottom: 0.5rem;
-    text-align: left;
-  }
-
-  /* Card description */
-  .uspDesc {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.01rem;
-    color: #444;
-    margin-bottom: 0;
-    text-align: left;
-  }
-
-  /* Arrow button bottom left */
-  .uspArrowBtn {
-    position: absolute;
-    left: 1.5rem;
-    bottom: 1.5rem;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #f4f4f4;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .uspArrowBtn:hover {
-    background: #e0e0e0;
-  }
-
-  @media (max-width: 900px) {
-    .uspHeader {
-      flex-direction: column;
-      gap: 1.2rem;
-      padding: 2.5rem 0 1rem 0;
-    }
-    .uspGrid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    .uspCard {
-      min-height: 200px;
-      padding: 2rem 1.2rem 2rem 1.2rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .uspSection {
-      padding: 0 0 2rem 0;
-    }
-    .uspHeader {
-      padding: 1.5rem 0 0.5rem 0;
-    }
-    .uspCard {
-      padding: 1.2rem 0.7rem 1.2rem 0.7rem;
-    }
-  }
+}

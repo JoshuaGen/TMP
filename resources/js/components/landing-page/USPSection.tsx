@@ -1,57 +1,80 @@
-
 import styles from './USPSection.module.css';
 
+const features = [
+  {
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="14" width="28" height="20" rx="4" fill="#f5f6fa" stroke="#bdbdbd" strokeWidth="2"/>
+        <path d="M18 24L22 28L30 20" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    title: 'Professional',
+    desc: 'Sed ut perspiciatis unde omnis iste natus voluptatem.',
+    dot: 'purple',
+    highlight: true,
+  },
+  {
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="14" width="28" height="20" rx="4" fill="#f5f6fa" stroke="#bdbdbd" strokeWidth="2"/>
+        <g><rect x="18" y="20" width="12" height="8" rx="2" fill="#bdbdbd"/></g>
+        <g><rect x="22" y="24" width="4" height="4" rx="1" fill="#7c3aed"/></g>
+      </svg>
+    ),
+    title: 'Sounds',
+    desc: 'Ut enim ad minima veniam quis nostrum exercitationem ullam.',
+    dot: 'blue',
+    highlight: true,
+  },
+  {
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="14" fill="#fff7f0" stroke="#fbbf24" strokeWidth="2"/>
+        <path d="M24 16V24L29 27" stroke="#fbbf24" strokeWidth="2.5" strokeLinecap="round"/>
+        <circle cx="24" cy="34" r="2" fill="#fbbf24"/>
+      </svg>
+    ),
+    title: 'Wireless',
+    desc: 'Laboris nisi ut aliquip ex ea commodo consequat.',
+    dot: 'orange',
+    highlight: true,
+  },
+  {
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="12" y="16" width="24" height="16" rx="3" fill="#f5f6fa" stroke="#bdbdbd" strokeWidth="2"/>
+        <rect x="20" y="32" width="8" height="2" rx="1" fill="#bdbdbd"/>
+        <rect x="18" y="20" width="12" height="6" rx="2" fill="#7c3aed"/>
+      </svg>
+    ),
+    title: 'Manage',
+    desc: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
+    dot: 'red',
+    highlight: true,
+  },
+];
 
 const USPSection: React.FC = () => (
   <section className={styles.uspSection}>
-    <div className={styles.uspHeader}>
-      <div>
-        <h2 className={styles.uspHeading}>Make your<br />spend, Well-spent</h2>
-      </div>
-      <div className={styles.uspSubheading}>
-        Manages a diversified group of specialized private credit brands with efficient tech-enabled processes.
-      </div>
-    </div>
     <div className={styles.uspGrid}>
-      <div className={styles.uspCard}>
-        <span className={styles.uspIcon} aria-hidden="true">
-          {/* Minimal line icon for Transparency */}
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#181d1b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="5"/></svg>
-        </span>
-        <div>
-          <h3 className={styles.uspTitle}>Transparency</h3>
-          <p className={styles.uspDesc}>A departure from the industry norm of ambiguity. Monitor, as a public and finest company.</p>
+      {features.map((f, i) => (
+        <div
+          className={`${styles.uspCard} ${styles.uspCardHighlight}`}
+          key={f.title}
+        >
+          <div className={styles.uspIcon}>{f.icon}</div>
+          <div className={styles.uspTitle}>{f.title}</div>
+          <div className={styles.uspDesc}>{f.desc}</div>
+          <span
+            className={
+              f.dot === 'purple' ? styles.dotPurple :
+              f.dot === 'blue' ? styles.dotBlue :
+              f.dot === 'orange' ? styles.dotOrange :
+              styles.dotRed
+            }
+          />
         </div>
-        <button className={styles.uspArrowBtn} aria-label="Learn more about Transparency">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#181d1b" strokeWidth="2"><circle cx="9" cy="9" r="8"/><path d="M7 9h4M10 7l2 2-2 2"/></svg>
-        </button>
-      </div>
-      <div className={styles.uspCard}>
-        <span className={styles.uspIcon} aria-hidden="true">
-          {/* Minimal line icon for Creative Expansion */}
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#181d1b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="16" cy="16" rx="10" ry="6"/><ellipse cx="16" cy="16" rx="5" ry="3"/></svg>
-        </span>
-        <div>
-          <h3 className={styles.uspTitle}>Creative expansion</h3>
-          <p className={styles.uspDesc}>Ascone proprietary fintech platform helps our subsidiaries locate and manage investments.</p>
-        </div>
-        <button className={styles.uspArrowBtn} aria-label="Learn more about Creative Expansion">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#181d1b" strokeWidth="2"><circle cx="9" cy="9" r="8"/><path d="M7 9h4M10 7l2 2-2 2"/></svg>
-        </button>
-      </div>
-      <div className={styles.uspCard}>
-        <span className={styles.uspIcon} aria-hidden="true">
-          {/* Minimal line icon for Private Credit Investments */}
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#181d1b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 6c5.5 0 10 4.5 10 10"/><path d="M16 11c3 0 5 2 5 5"/><circle cx="16" cy="21" r="2"/></svg>
-        </span>
-        <div>
-          <h3 className={styles.uspTitle}>Private Credit Investments</h3>
-          <p className={styles.uspDesc}>We provide access to unique private credit investments; a rare but valuable part of a sound investment portfolio.</p>
-        </div>
-        <button className={styles.uspArrowBtn} aria-label="Learn more about Private Credit Investments">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#181d1b" strokeWidth="2"><circle cx="9" cy="9" r="8"/><path d="M7 9h4M10 7l2 2-2 2"/></svg>
-        </button>
-      </div>
+      ))}
     </div>
   </section>
 );
