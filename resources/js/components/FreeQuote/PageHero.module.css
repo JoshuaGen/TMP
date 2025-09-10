@@ -1,42 +1,51 @@
 .pageHero {
-  background: #f0f0f0;
-  padding: 4rem 1.5rem 3rem 1.5rem;
+  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('/images/pexels-pok-rie-33563-171428.jpg') center/cover no-repeat;
+  padding: 6rem 1.5rem 5rem 1.5rem;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .title {
-  font-family: 'Reaktiv Heavy Italic', sans-serif;
-  font-size: 2.5rem;
-  font-style: italic;
-  font-weight: 900;
-  color: #333333;
-  margin-bottom: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
 }
 .subtext {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.125rem;
-  color: #a4a4a4;
-  margin-bottom: 2rem;
+  font-size: 0.98rem;
+  color: #fff;
+  margin-bottom: 1.2rem;
 }
 .ctaButton {
-  background: #007BFF;
+  background: #111;
   color: #fff;
   border: none;
   border-radius: 0.5rem;
-  padding: 0.75rem 2rem;
-  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.98rem;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin-top: 0.09rem;
+  box-shadow: 0 1px 2px rgba(51,51,51,0.04);
   cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s;
+  text-align: center;
+  transition: background 0.18s, transform 0.18s cubic-bezier(.4,0,.2,1);
   display: inline-block;
 }
 .ctaButton:hover {
-  background: #0056b3;
+  background: #333;
+  transform: scale(1.06);
 }
 @media (max-width: 640px) {
-  .pageHero { padding: 2rem 0.5rem 1.5rem 0.5rem; }
-  .title { font-size: 1.7rem; }
+  .pageHero { padding: 3rem 0.5rem 2rem 0.5rem; min-height: 340px; }
+  .title { font-size: 1.1rem; }
 }
 @media (min-width: 641px) and (max-width: 1024px) {
-  .title { font-size: 2rem; }
+  .title { font-size: 1.2rem; }
 }

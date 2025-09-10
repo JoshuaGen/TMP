@@ -1,12 +1,11 @@
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageHero from '../components/Projects/PageHero';
 import ProjectGallery from '../components/Projects/ProjectGallery';
 import FeaturedProjects from '../components/Projects/FeaturedProjects';
 import ImageCaptions from '../components/Projects/ImageCaptions';
-import ClientFeedbackStrip from '../components/Projects/ClientFeedbackStrip';
-import CallToAction from '../components/Projects/CallToAction';
+import Testimonials from '../components/landing-page/Testimonials';
+import CallToAction from '../components/ResidentialElectrical/CallToAction';
 
 const Projects: React.FC = () => (
   <>
@@ -16,7 +15,7 @@ const Projects: React.FC = () => (
       <ProjectGallery />
       <FeaturedProjects />
       <ImageCaptions />
-      <ClientFeedbackStrip />
+      <Testimonials />
       <CallToAction />
     </main>
     <Footer />

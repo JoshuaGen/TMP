@@ -1,32 +1,39 @@
 .imageCaptions {
-  background: #fff;
-  padding: 2rem 1.5rem;
+  background: #f7f8fa;
+  padding: 3.5rem 1.5rem 3rem 1.5rem;
   text-align: center;
 }
 .heading {
   font-family: 'Reaktiv Heavy Italic', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.02rem;
   font-style: italic;
   font-weight: 900;
-  color: #333333;
-  margin-bottom: 1rem;
+  color: #23272f;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.01em;
 }
 .captionList {
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.1rem;
 }
 .caption {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 0.92rem;
   color: #a4a4a4;
   text-align: left;
+  background: #fff;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1.2rem;
+  box-shadow: 0 2px 12px rgba(30,34,40,0.04);
 }
 @media (max-width: 640px) {
-  .imageCaptions { padding: 1rem 0.5rem; }
-  .heading { font-size: 1rem; }
+  .imageCaptions { padding: 1.5rem 0.5rem 1rem 0.5rem; }
+  .heading { font-size: 0.92rem; }
+  .captionList { gap: 0.7rem; }
+  .caption { padding: 0.5rem 0.7rem; font-size: 0.88rem; }
 }

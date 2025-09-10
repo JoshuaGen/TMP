@@ -1,25 +1,30 @@
 .pageHero {
-  background: #f0f0f0;
-  padding: 4rem 1.5rem 3rem 1.5rem;
+  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('/images/pexels-pok-rie-33563-171428.jpg') center/cover no-repeat;
+  padding: 6rem 1.5rem 5rem 1.5rem;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .title {
-  font-family: 'Reaktiv Heavy Italic', sans-serif;
-  font-size: 2.5rem;
-  font-style: italic;
-  font-weight: 900;
-  color: #333333;
-  margin-bottom: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
 }
 .tagline {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.125rem;
-  color: #a4a4a4;
+  font-size: 0.98rem;
+  color: #fff;
 }
 @media (max-width: 640px) {
-  .pageHero { padding: 2rem 0.5rem 1.5rem 0.5rem; }
-  .title { font-size: 1.7rem; }
+  .pageHero { padding: 3rem 0.5rem 2rem 0.5rem; min-height: 340px; }
+  .title { font-size: 1.1rem; }
 }
 @media (min-width: 641px) and (max-width: 1024px) {
-  .title { font-size: 2rem; }
+  .title { font-size: 1.2rem; }
 }

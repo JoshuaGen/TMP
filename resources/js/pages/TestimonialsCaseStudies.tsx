@@ -1,18 +1,17 @@
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageHero from '../components/TestimonialsCaseStudies/PageHero';
-import TestimonialsCarousel from '../components/TestimonialsCaseStudies/TestimonialsCarousel';
 import CaseStudies from '../components/TestimonialsCaseStudies/CaseStudies';
 import TrustSignals from '../components/TestimonialsCaseStudies/TrustSignals';
-import CallToAction from '../components/TestimonialsCaseStudies/CallToAction';
+import Testimonials from '../components/landing-page/Testimonials';
+import CallToAction from '../components/ResidentialElectrical/CallToAction';
 
 const TestimonialsCaseStudies: React.FC = () => (
   <>
     <Header />
     <main>
       <PageHero />
-      <TestimonialsCarousel />
+      <Testimonials />
       <CaseStudies />
       <TrustSignals />
       <CallToAction />

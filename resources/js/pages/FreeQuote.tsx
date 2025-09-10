@@ -1,11 +1,10 @@
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageHero from '../components/FreeQuote/PageHero';
 import ContactForm from '../components/FreeQuote/ContactForm';
 import ContactInfo from '../components/FreeQuote/ContactInfo';
 import TrustStatement from '../components/FreeQuote/TrustStatement';
-import FinalCallToAction from '../components/FreeQuote/FinalCallToAction';
+import CallToAction from '../components/ResidentialElectrical/CallToAction';
 
 const FreeQuote: React.FC = () => (
   <>
@@ -15,7 +14,7 @@ const FreeQuote: React.FC = () => (
       <ContactForm />
       <ContactInfo />
       <TrustStatement />
-      <FinalCallToAction />
+      <CallToAction />
     </main>
     <Footer />
   </>
