@@ -54,7 +54,7 @@
   inset: 0;
   background: rgba(0,0,0,0.38);
   z-index: 0;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(32px);
 }
 .buildersCard > * {
   position: relative;
@@ -72,11 +72,17 @@
   inset: 0;
   background: rgba(0,0,0,0.38);
   z-index: 0;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(32px);
 }
 .homeownersCard > * {
   position: relative;
   z-index: 1;
+}
+.buildersCard .subheading,
+.buildersCard .text,
+.homeownersCard .subheading,
+.homeownersCard .text {
+  color: #fff !important;
 }
 @media (min-width: 641px) {
   .content {
