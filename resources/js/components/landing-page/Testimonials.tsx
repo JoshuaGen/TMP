@@ -40,7 +40,14 @@ const Testimonials: React.FC = () => (
       {testimonials.map((t) => (
         <div className={styles.testimonialCard} key={t.name}>
           <div className={styles.testimonialHeader}>
-            <img src={t.avatar} alt={t.name} className={styles.avatar} />
+            <img
+              src={t.avatar}
+              alt={t.name}
+              className={styles.avatar}
+              onError={e => {
+                (e.currentTarget as HTMLImageElement).src = '/images/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg';
+              }}
+            />
             <div className={styles.metaText}>
               <span className={styles.testimonialName}>{t.name}</span>
               <span className={styles.testimonialRole}>{t.role}</span>

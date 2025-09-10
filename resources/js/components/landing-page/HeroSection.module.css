@@ -36,6 +36,11 @@
   flex-shrink: 0;
   position: static !important;
   min-height: 250px; /* Increased height further */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .backgroundImage {
@@ -48,6 +53,48 @@
   object-position: center 40px; /* Move image down a bit */
   z-index: 0;
   pointer-events: none;
+}
+
+.backgroundCarousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.backgroundCarousel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.13);
+  pointer-events: none;
+  z-index: 1;
+}
+.backgroundCarousel img,
+.backgroundCarousel img.active {
+  z-index: 0;
+}
+.backgroundCarousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40px;
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+}
+.backgroundCarousel img.active {
+  opacity: 1;
+  z-index: 1;
+}
+.active {
+  opacity: 1 !important;
+  z-index: 1;
 }
 
 .heroSection {

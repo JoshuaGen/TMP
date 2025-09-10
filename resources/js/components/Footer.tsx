@@ -13,7 +13,7 @@ const navLinks = [
 const Footer: React.FC = () => (
   <footer className={styles.footer}>
     <div className={styles.footerCol}>
-      <div className={styles.footerLogo}>Logo</div>
+  <div className={styles.footerLogo}>Temple Electrical</div>
       <div className={styles.footerDesc}>
         Temple Electrical – Professional, responsive, and local electrical services in Leeds & West Yorkshire.
       </div>

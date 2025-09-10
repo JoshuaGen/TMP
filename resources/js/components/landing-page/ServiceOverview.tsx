@@ -1,23 +1,22 @@
-
 import styles from './ServiceOverview.module.css';
 
 const services = [
   {
     title: 'Residential Electrical',
     desc: 'Expert electrical installations and repairs for homes.',
-    img: '/images/service-residential.jpg',
+    img: '/images/pexels-kseniachernaya-5767926.jpg',
     link: '#',
   },
   {
     title: 'Certifications & Testing',
     desc: 'Professional certifications and testing services.',
-    img: '/images/service-certification.jpg',
+    img: '/images/pexels-thembaforfun-33755219.jpg',
     link: '#',
   },
   {
     title: 'Commercial Services',
     desc: 'Reliable electrical solutions for businesses.',
-    img: '/images/service-commercial.jpg',
+    img: '/images/pexels-cottonbro-5090652.jpg',
     link: '#',
   },
 ];

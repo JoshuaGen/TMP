@@ -16,12 +16,36 @@ const GetQuoteSection: React.FC = () => (
       </form>
     </div>
     <div className={styles.bentoGrid}>
-      <div className={styles.bentoCard}>Fast Response</div>
-      <div className={styles.bentoCard}>Transparent Pricing</div>
-      <div className={styles.bentoCard}>Certified Electricians</div>
-      <div className={styles.bentoCard}>Satisfaction Guarantee</div>
-      <div className={styles.bentoCard}>24/7 Support</div>
-      <div className={styles.bentoCard}>Fully Insured</div>
+      <div
+        className={styles.bentoCard + ' ' + styles.fastResponseCard}
+      >
+        Fast Response
+      </div>
+      <div
+        className={styles.bentoCard + ' ' + styles.transparentPricingCard}
+      >
+        Transparent Pricing
+      </div>
+      <div
+        className={styles.bentoCard + ' ' + styles.certifiedElectriciansCard}
+      >
+        Certified Electricians
+      </div>
+      <div
+        className={styles.bentoCard + ' ' + styles.satisfactionGuaranteeCard}
+      >
+        Satisfaction Guarantee
+      </div>
+      <div
+        className={styles.bentoCard + ' ' + styles.twentyFourSevenCard}
+      >
+        24/7 Support
+      </div>
+      <div
+        className={styles.bentoCard + ' ' + styles.fullyInsuredCard}
+      >
+        Fully Insured
+      </div>
     </div>
   </section>
 );

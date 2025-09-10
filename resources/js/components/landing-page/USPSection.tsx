@@ -8,8 +8,8 @@ const features = [
         <path d="M18 24L22 28L30 20" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: 'Professional',
-    desc: 'Sed ut perspiciatis unde omnis iste natus voluptatem.',
+    title: 'Professional Electricians',
+    desc: 'All work is completed by fully certified, highly trained electricians with years of experience.',
     dot: 'purple',
     highlight: true,
   },
@@ -21,8 +21,8 @@ const features = [
         <g><rect x="22" y="24" width="4" height="4" rx="1" fill="#7c3aed"/></g>
       </svg>
     ),
-    title: 'Sounds',
-    desc: 'Ut enim ad minima veniam quis nostrum exercitationem ullam.',
+    title: 'Transparent Pricing',
+    desc: 'No hidden fees—just clear, upfront pricing and honest advice for every project.',
     dot: 'blue',
     highlight: true,
   },
@@ -34,8 +34,8 @@ const features = [
         <circle cx="24" cy="34" r="2" fill="#fbbf24"/>
       </svg>
     ),
-    title: 'Wireless',
-    desc: 'Laboris nisi ut aliquip ex ea commodo consequat.',
+    title: 'Certified & Insured',
+    desc: 'Work is covered by comprehensive insurance and all safety certifications for your peace of mind.',
     dot: 'orange',
     highlight: true,
   },
@@ -47,8 +47,8 @@ const features = [
         <rect x="18" y="20" width="12" height="6" rx="2" fill="#7c3aed"/>
       </svg>
     ),
-    title: 'Manage',
-    desc: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
+    title: 'Fast Response',
+    desc: 'We respond quickly to all enquiries and provide prompt, friendly service every time.',
     dot: 'red',
     highlight: true,
   },

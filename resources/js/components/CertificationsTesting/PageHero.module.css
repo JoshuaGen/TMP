@@ -1,5 +1,5 @@
 .pageHero {
-  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('/images/pexels-pok-rie-33563-171428.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('/images/pexels-jessica-monte-67886-311197.jpg') center/cover no-repeat;
   padding: 6rem 1.5rem 5rem 1.5rem;
   min-height: 600px;
   display: flex;
@@ -7,6 +7,19 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+}
+.pageHero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.48);
+  pointer-events: none;
+  z-index: 0;
+}
+.pageHero > * {
+  position: relative;
+  z-index: 1;
 }
 .title {
   font-family: 'Open Sans', sans-serif;
