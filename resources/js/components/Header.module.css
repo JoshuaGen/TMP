@@ -1,9 +1,9 @@
 .banner {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 200;
+  z-index: 202;
   background: #111;
   color: #fff;
   display: flex;
@@ -37,10 +37,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 36px;
-  z-index: 100;
+  left: 0;
+  z-index: 201;
   min-height: 64px;
+  transition: top 0.3s cubic-bezier(.4,0,.2,1);
+}
+.headerNoBanner {
+  top: 0 !important;
 }
 .logo {
   font-family: 'Reaktiv Heavy Italic', 'Open Sans', sans-serif;
@@ -137,4 +142,7 @@
     font-size: 1.05rem;
     border-radius: 0.3rem;
   }
+}
+.mainWithHeader {
+  padding-top: 100px; /* 36px banner + 64px header */
 }

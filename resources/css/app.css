@@ -157,3 +157,10 @@
         @apply bg-background text-foreground;
     }
 }
+
+html, body {
+  overflow-x: hidden;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}

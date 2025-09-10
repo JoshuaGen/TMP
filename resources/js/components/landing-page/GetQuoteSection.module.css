@@ -260,6 +260,7 @@
   min-width: 0;
   min-height: 0;
   transition: box-shadow 0.18s, background 0.18s;
+  will-change: transform, opacity;
 }
 .transparentPricingCard {
   background: url('/images/pexels-bulat369-1243575272-33694019.jpg') center center/cover no-repeat !important;

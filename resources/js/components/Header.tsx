@@ -23,13 +23,12 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <div
-        className={showBanner ? `${styles.banner} ${styles.bannerVisible}` : `${styles.banner}`}
+      <div className={showBanner ? `${styles.banner} ${styles.bannerVisible}` : styles.banner}
         aria-hidden={!showBanner}
       >
         <span className={styles.bannerText}>Now serving all of Leeds & West Yorkshire!</span>
       </div>
-      <header className={styles.header} style={showBanner ? {} : {top: 0}}>
+      <header className={showBanner ? styles.header : `${styles.header} ${styles.headerNoBanner}`}>
         <div className={styles.logo}>Temple Electrical</div>
         <nav className={styles.nav}>
           {navLinks.map(link => (

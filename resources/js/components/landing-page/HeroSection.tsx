@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
 
 
@@ -18,7 +19,13 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className={styles.heroSection}>
+    <motion.section
+      className={styles.heroSection}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+    >
       <div className={styles.backgroundCarousel}>
         {carouselImages.map((src, idx) => (
           <img
@@ -57,7 +64,7 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,7 +1,15 @@
+import { motion } from 'framer-motion';
+
 import styles from './LocationFocus.module.css';
 
 const LocationFocus: React.FC = () => (
-  <section className={styles.locationFocus}>
+  <motion.section
+    className={styles.locationFocus}
+    initial={{ opacity: 0, y: -60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.4 }}
+    transition={{ duration: 0.7, ease: 'easeOut' }}
+  >
     <span className={styles.mapPin}>
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="24" cy="41" rx="7" ry="3" fill="#222" fillOpacity="0.18"/>
@@ -21,7 +29,7 @@ const LocationFocus: React.FC = () => (
       <div className={styles.infoLine}>Mon-Fri: 8am - 6pm</div>
       <div className={styles.infoLine}>123 Electric Ave, Leeds, LS1 1AB</div>
     </div>
-  </section>
+  </motion.section>
 );
 
 export default LocationFocus;

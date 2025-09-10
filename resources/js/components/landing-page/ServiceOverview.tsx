@@ -1,3 +1,4 @@
+import { motion, easeOut } from 'framer-motion';
 import styles from './ServiceOverview.module.css';
 
 const services = [
@@ -21,12 +22,35 @@ const services = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.22, duration: 0.35, ease: easeOut },
+  }),
+};
+
 const ServiceOverview: React.FC = () => (
-  <section className={styles.serviceOverview}>
+  <motion.section
+    className={styles.serviceOverview}
+    initial={{ opacity: 0, x: -60 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, amount: 0.4 }}
+    transition={{ duration: 0.7, ease: 'easeOut' }}
+  >
     <h2 className={styles.heading}>Our Services</h2>
     <div className={styles.serviceGrid}>
-      {services.map((service) => (
-        <div className={styles.serviceItem} key={service.title}>
+      {services.map((service, i) => (
+        <motion.div
+          className={styles.serviceItem}
+          key={service.title}
+          custom={i}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={cardVariants}
+        >
           <div className={styles.cardImageWrap}>
             <img
               src={service.img}
@@ -38,10 +62,10 @@ const ServiceOverview: React.FC = () => (
           <h3 className={styles.serviceTitle}>{service.title}</h3>
           <p className={styles.serviceDesc}>{service.desc}</p>
           <a className={styles.serviceButton} href={service.link}>Learn More</a>
-        </div>
+        </motion.div>
       ))}
     </div>
-  </section>
+  </motion.section>
 );
 
 export default ServiceOverview;

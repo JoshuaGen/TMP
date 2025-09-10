@@ -1,3 +1,4 @@
+import { motion, easeOut } from 'framer-motion';
 import styles from './USPSection.module.css';
 
 const features = [
@@ -54,13 +55,33 @@ const features = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, x: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.22, duration: 0.35, ease: easeOut },
+  }),
+};
+
 const USPSection: React.FC = () => (
-  <section className={styles.uspSection}>
+  <motion.section
+    className={styles.uspSection}
+    initial={{ opacity: 0, x: 60 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, amount: 0.4 }}
+    transition={{ duration: 0.7, ease: 'easeOut' }}
+  >
     <div className={styles.uspGrid}>
       {features.map((f, i) => (
-        <div
+        <motion.div
           className={`${styles.uspCard} ${styles.uspCardHighlight}`}
           key={f.title}
+          custom={i}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={cardVariants}
         >
           <div className={styles.uspIcon}>{f.icon}</div>
           <div className={styles.uspTitle}>{f.title}</div>
@@ -73,10 +94,10 @@ const USPSection: React.FC = () => (
               styles.dotRed
             }
           />
-        </div>
+        </motion.div>
       ))}
     </div>
-  </section>
+  </motion.section>
 );
 
 export default USPSection;

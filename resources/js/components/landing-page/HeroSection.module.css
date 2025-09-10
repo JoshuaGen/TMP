@@ -11,13 +11,14 @@
 .lowerRightCards {
   position: absolute;
   right: 1.7rem;
-  bottom: 110px;
+  bottom: 40px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   gap: 0.7rem;
   z-index: 2;
   width: auto;
+  margin-top: 8rem;
 }
 
 .cardColumn {
@@ -114,10 +115,11 @@
 .mainHeroCard {
   position: absolute;
   left: 0;
-  bottom: 110px;
+  bottom: 40px;
   margin-left: 1.7rem;
   max-width: 540px;
   width: auto;
+  /* margin-top: 8rem; */
 }
 
 .heroCard {

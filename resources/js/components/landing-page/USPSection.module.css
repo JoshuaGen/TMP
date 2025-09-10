@@ -25,6 +25,7 @@
   min-height: 140px;
   position: relative;
   transition: box-shadow 0.18s, background 0.18s;
+  will-change: transform, opacity;
 }
 .uspCardHighlight {
   background: #fff;

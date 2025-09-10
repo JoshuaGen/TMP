@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './Footer.module.css';
 
 const navLinks = [
@@ -11,9 +12,15 @@ const navLinks = [
 ];
 
 const Footer: React.FC = () => (
-  <footer className={styles.footer}>
+  <motion.footer
+    className={styles.footer}
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.7, ease: 'easeOut' }}
+  >
     <div className={styles.footerCol}>
-  <div className={styles.footerLogo}>Temple Electrical</div>
+      <div className={styles.footerLogo}>Temple Electrical</div>
       <div className={styles.footerDesc}>
         Temple Electrical – Professional, responsive, and local electrical services in Leeds & West Yorkshire.
       </div>
@@ -39,7 +46,7 @@ const Footer: React.FC = () => (
         <span className={styles.socialIcon}>I</span>
       </div>
     </div>
-  </footer>
+  </motion.footer>
 );
 
 export default Footer;

@@ -1,3 +1,4 @@
+import { motion, easeOut } from 'framer-motion';
 import styles from './Testimonials.module.css';
 
 const testimonials = [
@@ -33,12 +34,35 @@ const testimonials = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.22, duration: 0.35, ease: easeOut },
+  }),
+};
+
 const Testimonials: React.FC = () => (
-  <section className={styles.testimonialsSection}>
+  <motion.section
+    className={styles.testimonialsSection}
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.4 }}
+    transition={{ duration: 0.7, ease: 'easeOut' }}
+  >
     <h2 className={styles.testimonialsTitle}>What Our Clients Say</h2>
     <div className={styles.testimonialsGrid}>
-      {testimonials.map((t) => (
-        <div className={styles.testimonialCard} key={t.name}>
+      {testimonials.map((t, i) => (
+        <motion.div
+          className={styles.testimonialCard}
+          key={t.name}
+          custom={i}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={cardVariants}
+        >
           <div className={styles.testimonialHeader}>
             <img
               src={t.avatar}
@@ -55,10 +79,10 @@ const Testimonials: React.FC = () => (
           </div>
           <div className={styles.testimonialDivider} />
           <p className={styles.testimonialText}>{t.text}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
-  </section>
+  </motion.section>
 );
 
 export default Testimonials;
