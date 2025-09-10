@@ -26,7 +26,7 @@
   padding: 1.3rem 1.1rem;
   text-align: left;
   box-shadow: 0 2px 12px rgba(30,34,40,0.04);
-  min-height: 120px;
+  min-height: 520px;
 }
 .subheading {
   font-family: 'Reaktiv Heavy Italic', sans-serif;
@@ -41,6 +41,42 @@
   font-size: 0.92rem;
   color: #444;
   line-height: 1.6;
+}
+.buildersCard {
+  background: url('/images/pexels-cottonbro-5090652.jpg') center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.buildersCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 0;
+  backdrop-filter: blur(16px);
+}
+.buildersCard > * {
+  position: relative;
+  z-index: 1;
+}
+.homeownersCard {
+  background: url('/images/pexels-cottonbro-3202237.jpg') center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.homeownersCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 0;
+  backdrop-filter: blur(16px);
+}
+.homeownersCard > * {
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 641px) {
   .content {

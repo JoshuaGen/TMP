@@ -1,5 +1,5 @@
 .servicesGrid {
-  background: #f7f8fa;
+  background: #fff;
   padding: 5.5rem 1.5rem 5rem 1.5rem;
   text-align: center;
 }
@@ -27,6 +27,8 @@
   text-align: left;
   transition: box-shadow 0.2s, transform 0.2s;
   min-height: 240px;
+  display: flex;
+  flex-direction: column;
 }
 .card:hover {
   box-shadow: 0 6px 24px rgba(0,123,255,0.10);
@@ -48,15 +50,141 @@
   line-height: 1.6;
 }
 .cardLink {
-  color: #007BFF;
+  color: #111;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   text-decoration: underline;
   transition: color 0.2s;
   font-size: 0.92rem;
+  margin-top: auto;
 }
 .cardLink:hover {
-  color: #0056b3;
+  color: #444;
+}
+.rewiringCard {
+  background: url('/images/pexels-cottonbro-5090652.jpg') center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.rewiringCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 0;
+}
+.rewiringCard > * {
+  position: relative;
+  z-index: 1;
+}
+.lightSwitchesCard {
+  background: url('/images/pexels-laup-25819964.jpg') center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.lightSwitchesCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 0;
+}
+.lightSwitchesCard > * {
+  position: relative;
+  z-index: 1;
+}
+.lightingCard {
+  background: url('/images/pexels-cottonbro-3202237.jpg') center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.lightingCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 0;
+}
+.lightingCard > * {
+  position: relative;
+  z-index: 1;
+}
+.socketInstallationsCard {
+  background: url('/images/pexels-francesco-ungaro-27862195.jpg') center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.socketInstallationsCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 0;
+}
+.socketInstallationsCard > * {
+  position: relative;
+  z-index: 1;
+}
+.smartHomesCard {
+  background: url('/images/pexels-kamenczak-775219.jpg') center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.smartHomesCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 0;
+}
+.smartHomesCard > * {
+  position: relative;
+  z-index: 1;
+}
+.ledLightingCard {
+  background: url('/images/pexels-jplenio-2044447.jpg') center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.ledLightingCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 0;
+}
+.ledLightingCard > * {
+  position: relative;
+  z-index: 1;
+}
+.rewiringCard, .smartHomesCard, .ledLightingCard, .socketInstallationsCard, .lightSwitchesCard, .lightingCard {
+  color: #fff;
+}
+.rewiringCard .cardTitle,
+.rewiringCard .cardDesc,
+.rewiringCard .cardLink,
+.smartHomesCard .cardTitle,
+.smartHomesCard .cardDesc,
+.smartHomesCard .cardLink,
+.ledLightingCard .cardTitle,
+.ledLightingCard .cardDesc,
+.ledLightingCard .cardLink,
+.socketInstallationsCard .cardTitle,
+.socketInstallationsCard .cardDesc,
+.socketInstallationsCard .cardLink,
+.lightSwitchesCard .cardTitle,
+.lightSwitchesCard .cardDesc,
+.lightSwitchesCard .cardLink,
+.lightingCard .cardTitle,
+.lightingCard .cardDesc,
+.lightingCard .cardLink {
+  color: #fff !important;
 }
 @media (min-width: 641px) {
   .grid {
