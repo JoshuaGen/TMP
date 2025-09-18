@@ -29,7 +29,13 @@ const Header: React.FC = () => {
         <span className={styles.bannerText}>Now serving all of Leeds & West Yorkshire!</span>
       </div>
       <header className={showBanner ? styles.header : `${styles.header} ${styles.headerNoBanner}`}>
-        <div className={styles.logo}>Temple Electrical</div>
+        <div className={styles.logo}>
+          <img
+            src="/images/logo/475998601_122102365544757641_4418396888111844212_n-removebg-preview__1___1_-removebg-preview.webp"
+            alt="Temple Electrical Logo"
+            style={{ height: '38px', width: 'auto', display: 'block', filter: 'brightness(0) invert(0)' }}
+          />
+        </div>
         <nav className={styles.nav}>
           {navLinks.map(link => (
             <a key={link.name} href={link.href} className={styles.navLink}>

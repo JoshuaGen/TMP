@@ -20,7 +20,13 @@ const Footer: React.FC = () => (
     transition={{ duration: 0.7, ease: 'easeOut' }}
   >
     <div className={styles.footerCol}>
-      <div className={styles.footerLogo}>Temple Electrical</div>
+      <div className={styles.footerLogo}>
+        <img
+          src="/images/logo/475998601_122102365544757641_4418396888111844212_n-removebg-preview__1___1_-removebg-preview.webp"
+          alt="Temple Electrical Logo"
+          style={{ height: '38px', width: 'auto', display: 'block', filter: 'brightness(0) invert(1)' }}
+        />
+      </div>
       <div className={styles.footerDesc}>
         Temple Electrical – Professional, responsive, and local electrical services in Leeds & West Yorkshire.
       </div>

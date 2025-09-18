@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styles from './Introduction.module.css';
 
 const overviews = [
-  "Electrical certifications are essential for ensuring the safety and legal compliance of your property. Our accredited testing services help protect you, your tenants, and your investment.",
-  "We provide landlord safety certificates, EICRs, and PAT testing to keep your property compliant and your residents safe.",
-  "Our team is fully accredited and up-to-date with the latest regulations, ensuring your peace of mind and legal protection."
+  "We specialise in electrical testing in Leeds — including EICR landlord certificates, homeowner reports and PAT testing for rentals — to keep your property safe and legally compliant.",
+  "Our certified electricians carry out thorough inspections to BS 7671, providing clear recommendations and rapid remedial support where needed. Ideal for landlords, estate agents and HMO owners.",
+  "Book your electrical testing in Leeds today for reliable documentation, fast turnaround and competitive pricing — all handled by a trusted local team."
 ];
 
 const Introduction: React.FC = () => {

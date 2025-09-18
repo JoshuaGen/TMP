@@ -14,11 +14,28 @@
 }
 
 .testimonialsGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns for 5 testimonials */
-  gap: 2.8rem; /* More space between cards */
-  max-width: 1800px; /* Increased from 1400px */
+  position: relative;
+  overflow: hidden;
+  max-width: 1800px;
   margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.track {
+  list-style: none;
+  display: inline-flex;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+
+.item {
+  display: inline-flex;
+  margin-right: var(--card-gap, 24px);
+  /* allow content inside each card to wrap normally */
+  white-space: normal;
 }
 
 .testimonialCard {
@@ -31,10 +48,12 @@
   align-items: flex-start;
   min-width: 0;
   min-height: 140px;
-  max-width: 320px;
-  margin: 0 auto;
+  width: 320px;
   transition: box-shadow 0.18s, background 0.18s;
   will-change: transform, opacity;
+  /* ensure text inside can wrap and not escape the card */
+  white-space: normal;
+  overflow: hidden;
 }
 
 .testimonialHeader {
@@ -82,22 +101,18 @@
   margin: 0 0 0 18px;
   line-height: 1.5;
   text-align: left;
+  /* wrap long words/urls and prevent overflow */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 @media (max-width: 1200px) {
-  .testimonialsGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
+  .testimonialCard { width: 300px; }
 }
 @media (max-width: 800px) {
-  .testimonialsGrid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-  .testimonialCard {
-    max-width: 340px;
-  }
+  .testimonialCard { width: 280px; }
 }
 @media (max-width: 640px) {
   .testimonialsSection {

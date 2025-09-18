@@ -1,4 +1,5 @@
 import React from 'react';
+import { Check } from 'lucide-react';
 import styles from './TrustSignals.module.css';
 
 const signals = [
@@ -13,8 +14,10 @@ const TrustSignals: React.FC = () => (
     <h2 className={styles.heading}>Our Credentials</h2>
     <div className={styles.grid}>
       {signals.map(signal => (
-        <div key={signal.label} className={styles.signal}>
-          <span className={styles.icon}>{signal.icon}</span>
+        <div key={signal.label} className={styles.signal} tabIndex={0}>
+          <span className={styles.icon} aria-hidden>
+            <Check className={styles.iconGlyph} size={16} />
+          </span>
           <span className={styles.label}>{signal.label}</span>
         </div>
       ))}

@@ -9,9 +9,9 @@ const ComplianceStandards: React.FC = () => (
     </p>
     <div className={styles.logos}>
       {/* Replace with actual logos as needed */}
-      <span className={styles.logo}>NICEIC</span>
-      <span className={styles.logo}>Part P</span>
-      <span className={styles.logo}>ECA</span>
+      <span className={styles.logo} tabIndex={0}>NICEIC</span>
+      <span className={styles.logo} tabIndex={0}>Part P</span>
+      <span className={styles.logo} tabIndex={0}>ECA</span>
     </div>
   </section>
 );

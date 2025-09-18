@@ -4,7 +4,7 @@ import PageHero from '../components/CertificationsTesting/PageHero';
 import Introduction from '../components/CertificationsTesting/Introduction';
 import ServiceBreakdown from '../components/CertificationsTesting/ServiceBreakdown';
 import ComplianceStandards from '../components/CertificationsTesting/ComplianceStandards';
-import TrustBadgeRow from '../components/CertificationsTesting/TrustBadgeRow';
+import TrustSignals from '../components/TestimonialsCaseStudies/TrustSignals';
 import CallToAction from '../components/ResidentialElectrical/CallToAction';
 
 const CertificationsTesting: React.FC = () => (
@@ -14,8 +14,8 @@ const CertificationsTesting: React.FC = () => (
       <PageHero />
       <Introduction />
       <ServiceBreakdown />
-      <ComplianceStandards />
-      <TrustBadgeRow />
+    <ComplianceStandards />
+    <TrustSignals />
       <CallToAction />
     </main>
     <Footer />

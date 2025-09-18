@@ -1,12 +1,11 @@
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Head, Link } from '@inertiajs/react';
+import { Head } from '@inertiajs/react';
 
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/landing-page/HeroSection';
+import HomeSEO from '../components/landing-page/HomeSEO';
 import USPSection from '../components/landing-page/USPSection';
 import ServiceOverview from '../components/landing-page/ServiceOverview';
 import Testimonials from '../components/landing-page/Testimonials';
@@ -26,6 +25,7 @@ export default function Welcome() {
                 <HeroSection />
                 <USPSection />
                 <ServiceOverview />
+                <HomeSEO />
                 <Testimonials />
                 <LocationFocus />
                 <GetQuoteSection />

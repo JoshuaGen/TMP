@@ -1,5 +1,5 @@
 .trustStatement {
-  background: #f7f8fa;
+  background: #222;
   padding: 2.5rem 1.5rem 2rem 1.5rem;
   border-radius: 1.1rem;
   max-width: 1800px;
@@ -10,10 +10,10 @@
 .text {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.92rem;
-  color: #23272f;
+  color: #fff;
   letter-spacing: 0.01em;
 }
 @media (max-width: 640px) {
   .trustStatement { padding: 1.2rem 0.5rem 1rem 0.5rem; border-radius: 0.7rem; max-width: 100%; }
-  .text { font-size: 0.88rem; }
+  .text { font-size: 0.88rem; color: #fff; }
 }

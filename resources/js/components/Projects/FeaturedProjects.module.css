@@ -1,5 +1,5 @@
-.featuredProjects {
-  background: #f7f8fa;
+ .featuredProjects {
+  background: #fff;
   padding: 5.5rem 1.5rem 5rem 1.5rem;
   text-align: center;
 }
@@ -15,34 +15,67 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   max-width: 1800px;
   margin: 0 auto;
 }
 .card {
   background: #fff;
   border-radius: 1.1rem;
-  box-shadow: 0 2px 12px rgba(30,34,40,0.04);
+  box-shadow: 0 2px 12px rgba(30,34,40,0.06);
+  outline: 1px solid rgba(17,17,17,0.06);
   overflow: hidden;
   text-align: left;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, outline-color 0.2s;
   min-height: 120px;
+  display: flex;
+  flex-direction: column;
 }
 .card:hover {
-  box-shadow: 0 6px 24px rgba(0,123,255,0.10);
+  box-shadow: 0 10px 28px rgba(0,123,255,0.18);
   transform: translateY(-3px);
+  outline-color: rgba(0,123,255,0.25);
 }
 .image {
   width: 100%;
-  height: 120px;
-  background: #eaf6ff;
+  height: 260px;
+  background: linear-gradient(120deg,#eaf6ff,#dfefff);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
+.coverImage { width: 100%; height: 100%; object-fit: cover; display: block; }
+.imageOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.25));
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+.badge {
+  position: absolute; top: 10px; left: 10px;
+  background: #222; /* match footer */
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.card:hover .coverImage { transform: scale(1.04); transition: transform 260ms ease; }
+.card:hover .imageOverlay { opacity: 0.9; }
+.image svg { filter: drop-shadow(0 1px 0 rgba(0,0,0,0.02)); }
 .cardContent {
-  padding: 1.1rem 1.2rem;
+  padding: 1.1rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
+.metaRow { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+.metaChip { display: inline-flex; align-items: center; gap: 6px; background: #f0f4ff; color: #1f3a93; border: 1px solid #d6e4ff; padding: 3px 8px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; }
+.metaChip svg { stroke: #1f3a93; }
 .cardTitle {
   font-family: 'Reaktiv Heavy Italic', sans-serif;
   font-size: 1.02rem;
@@ -55,30 +88,47 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 0.92rem;
   color: #444;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
+.flow strong { color: #23272f; }
+.flow dt { font-weight: 700; color: #23272f; }
+.flow dd { margin: 0; }
 .cardLink {
-  color: #007BFF;
+  align-self: flex-start;
+  background: #222; /* match footer */
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 0.8rem;
+  padding: 0.6rem 0.9rem;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  text-decoration: underline;
-  transition: color 0.2s;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.18s;
   font-size: 0.92rem;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.cardLink:hover {
-  color: #0056b3;
-}
+.cardLink:hover { background: #111; border-color: #111; transform: translateY(-1px); }
+.cardLink:hover .arrow { transform: translateX(2px); transition: transform 160ms ease; }
+.card:focus-within { outline: 2px solid #111; outline-offset: 2px; }
+.cardLink:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
 @media (min-width: 641px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+@media (min-width: 1200px) {
+  .grid { grid-template-columns: 1fr 1fr 1fr; }
+}
 @media (max-width: 640px) {
   .featuredProjects { padding: 2.5rem 0.5rem 2rem 0.5rem; }
   .heading { font-size: 1rem; }
+  .image { height: 200px; }
 }

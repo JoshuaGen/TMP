@@ -1,5 +1,5 @@
-.imageCaptions {
-  background: #f7f8fa;
+ .imageCaptions {
+  background: #fff;
   padding: 3.5rem 1.5rem 3rem 1.5rem;
   text-align: center;
 }
@@ -12,28 +12,49 @@
   margin-bottom: 1.1rem;
   letter-spacing: 0.01em;
 }
-.captionList {
-  list-style: none;
-  padding: 0;
+.scrollerWrap {
+  position: relative;
+  max-width: 1800px;
   margin: 0 auto;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
+  overflow: hidden;
+  padding: 0.5rem 0.25rem; /* outer padding only, avoids offset at loop */
 }
-.caption {
+.scroller {
+  list-style: none;
+  display: inline-flex; /* inline so width equals content width */
+  gap: 0; /* use explicit margins on chips to avoid flex gap rounding */
+  padding: 0; /* no inner horizontal padding to keep seam flush */
+  margin: 0;
+  white-space: nowrap;
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+.scroller::-webkit-scrollbar { display: none; }
+/* use margin on chips for spacing; last child margin creates seam spacing equal to item spacing */
+.chip { margin-right: var(--chip-gap, 0.75rem); }
+.chip {
+  background: #222; /* footer black */
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 0.9rem;
+  padding: 0.7rem 1rem;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.92rem;
-  color: #a4a4a4;
-  text-align: left;
-  background: #fff;
-  border-radius: 0.7rem;
-  padding: 0.7rem 1.2rem;
-  box-shadow: 0 2px 12px rgba(30,34,40,0.04);
+  white-space: nowrap;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
+.chip:hover { background: #111; border-color: #111; transform: translateY(-1px); }
+.chip:focus-visible { outline: 2px solid #0056b3; outline-offset: 2px; }
+.edgeLeft, .edgeRight {
+  position: absolute; top: 0; bottom: 0; width: 48px; pointer-events: none;
+}
+.edgeLeft { left: 0; background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0) 100%); }
+.edgeRight { right: 0; background: linear-gradient(270deg, #fff 0%, rgba(255,255,255,0) 100%); }
+
+/* keyframes removed: JS-driven ticker controls transform */
 @media (max-width: 640px) {
   .imageCaptions { padding: 1.5rem 0.5rem 1rem 0.5rem; }
   .heading { font-size: 0.92rem; }
-  .captionList { gap: 0.7rem; }
-  .caption { padding: 0.5rem 0.7rem; font-size: 0.88rem; }
+  .scrollerWrap { padding: 0.25rem 0.125rem; }
+  .chip { padding: 0.5rem 0.7rem; font-size: 0.88rem; }
 }

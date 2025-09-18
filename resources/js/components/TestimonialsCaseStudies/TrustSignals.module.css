@@ -1,5 +1,5 @@
 .trustSignals {
-  background: #f7f8fa;
+  background: #fff;
   padding: 3.5rem 1.5rem 3rem 1.5rem;
   text-align: center;
 }
@@ -15,34 +15,51 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 1rem 1.2rem;
   justify-content: center;
   align-items: center;
   max-width: 1800px;
   margin: 0 auto;
 }
+@media (min-width: 1024px) {
+  .grid { flex-wrap: nowrap; gap: 1rem; }
+}
 .signal {
   background: #fff;
-  border-radius: 0.9rem;
+  border-radius: 999px;
   box-shadow: 0 2px 12px rgba(30,34,40,0.04);
-  padding: 0.8rem 1.7rem;
-  display: flex;
+  outline: 1px solid rgba(17,17,17,0.06);
+  padding: 0.55rem 0.9rem 0.55rem 0.6rem;
+  display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.55rem;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   color: #23272f;
+  transition: transform 160ms ease, box-shadow 160ms ease, outline-color 160ms ease;
 }
+.signal:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0,123,255,0.14); outline-color: rgba(0,123,255,0.22); }
+.signal:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
 .icon {
-  color: #007BFF;
-  font-size: 1.2rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #222; /* footer black */
+  color: #fff;
+  border: 1px solid #222;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+  line-height: 1;
 }
+.iconGlyph { stroke: #fff; }
 .label {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
 @media (max-width: 640px) {
   .trustSignals { padding: 1.5rem 0.5rem 1rem 0.5rem; }
-  .grid { gap: 1rem; }
-  .signal { padding: 0.6rem 1rem; font-size: 0.92rem; }
+  .grid { gap: 0.7rem 0.6rem; }
+  .signal { padding: 0.45rem 0.7rem 0.45rem 0.5rem; font-size: 0.9rem; }
+  .icon { width: 24px; height: 24px; border-radius: 6px; font-size: 0.84rem; }
 }

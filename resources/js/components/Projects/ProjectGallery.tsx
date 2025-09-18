@@ -1,39 +1,57 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './ProjectGallery.module.css';
 
-const categories = ['All', 'Residential', 'Commercial'];
-const projects = [
-  { id: 1, title: 'Modern Home Rewire', category: 'Residential', image: '', caption: 'Full rewire for a 1930s home.' },
-  { id: 2, title: 'Office Lighting Upgrade', category: 'Commercial', image: '', caption: 'LED lighting for a Leeds office.' },
-  { id: 3, title: 'Smart Home Install', category: 'Residential', image: '', caption: 'Smart controls and automation.' },
-  { id: 4, title: 'Retail Fit-Out', category: 'Commercial', image: '', caption: 'Complete electrical fit-out for retail.' },
-];
-
 const ProjectGallery: React.FC = () => {
-  const [filter, setFilter] = useState('All');
-  const filtered = filter === 'All' ? projects : projects.filter(p => p.category === filter);
-
   return (
     <section className={styles.gallerySection}>
-      <h2 className={styles.heading}>Project Gallery</h2>
-      <div className={styles.filters}>
-        {categories.map(cat => (
-          <button key={cat} className={filter === cat ? styles.active : ''} onClick={() => setFilter(cat)}>{cat}</button>
-        ))}
-      </div>
-      <div className={styles.grid}>
-        {filtered.map(project => (
-          <div key={project.id} className={styles.card}>
-            <div className={styles.image} aria-hidden="true">
-              {/* Replace with actual image */}
-              <svg width="100%" height="120" viewBox="0 0 120 80" fill="none"><rect width="120" height="80" rx="16" fill="#eaf6ff"/></svg>
-            </div>
-            <div className={styles.cardContent}>
-              <h3 className={styles.cardTitle}>{project.title}</h3>
-              <p className={styles.caption}>{project.caption}</p>
-            </div>
+      <div className={styles.gridWrap}>
+        {/* Left hero panel */}
+  <article className={`${styles.panel} ${styles.hero}`} aria-label="Featured project">
+          <div className={styles.media} />
+          <div className={styles.overlay} />
+          <div className={styles.contentBottom}>
+            <h2 className={styles.titleLg}>Smart Home Upgrade</h2>
+            <p className={styles.subtitle}>Whole‑home automation, mood lighting, and energy insights</p>
           </div>
-        ))}
+          <div className={styles.bottomRow}>
+            <button className={`${styles.cta} ${styles.ctaPrimary}`} aria-label="Discover more about Smart Home Upgrade">Discover More</button>
+            <button className={styles.cta} aria-label="Previous">Previous</button>
+            <button className={styles.cta} aria-label="Next">Next</button>
+          </div>
+        </article>
+
+        {/* Top middle text tile */}
+  <article className={`${styles.panel} ${styles.tileText}`} aria-label="Explore electrical projects">
+          <div className={styles.media} />
+          <div className={styles.overlaySoft} />
+          <div className={styles.contentBottom}><h3 className={styles.titleSm}>Explore</h3><p className={styles.blurb}>EV chargers, rewires, lighting design, and testing.</p></div>
+        </article>
+
+        {/* Right tall image */}
+  <article className={`${styles.panel} ${styles.tileTall}`} aria-label="Tall project image">
+          <div className={styles.media} />
+          <div className={styles.overlaySoft} />
+        </article>
+
+        {/* Middle image */}
+  <article className={`${styles.panel} ${styles.tileImage}`} aria-label="Project image">
+          <div className={styles.media} />
+        </article>
+
+        {/* Bottom left text tile */}
+  <article className={`${styles.panel} ${styles.tileText2}`} aria-label="Adventure copy">
+          <div className={styles.media} />
+          <div className={styles.overlaySoft} />
+          <div className={styles.contentBottom}><h3 className={styles.titleSm}>Lighting Transformation</h3><p className={styles.blurb}>From dim and dated to bright, efficient, and modern—tailored to each room’s purpose.</p></div>
+        </article>
+
+        {/* Bottom right text tile */}
+  <article className={`${styles.panel} ${styles.tileText3}`} aria-label="Cuisine copy">
+          <div className={styles.media} />
+          <div className={styles.overlaySoft} />
+          <div className={styles.contentBottom}><h3 className={styles.titleSm}>Compliance & Testing</h3><p className={styles.blurb}>EICRs and certification for landlords and homeowners—safety, documented.</p></div>
+        </article>
+
       </div>
     </section>
   );

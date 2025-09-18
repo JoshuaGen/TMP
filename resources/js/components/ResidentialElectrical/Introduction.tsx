@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styles from './Introduction.module.css';
 
 const overviews = [
-  "Our residential electrical services cover everything from new installations to upgrades and repairs. We ensure your home is safe, energy-efficient, and up to code, with a focus on quality workmanship and customer satisfaction.",
-  "We offer 24/7 emergency support for all residential electrical issues, ensuring your peace of mind and safety at any hour.",
-  "Our team specializes in smart home upgrades, helping you modernize your living space with the latest technology and energy-saving solutions."
+  "As a trusted electrician in Leeds, we provide safe, tidy and compliant residential electrical services across West Yorkshire — from fault finding and repairs to full rewires, consumer unit upgrades, EV charger installation and modern LED lighting.",
+  "Every home project is completed to BS 7671 standards by fully certified and insured electricians. We keep you informed at every step and deliver a neat finish, whether it’s a small fix or a full home renovation.",
+  "Need advice or a price for your job? Get a free quote today for electrical services in Leeds — fast response, transparent pricing and friendly, professional support."
 ];
 
 const Introduction: React.FC = () => {

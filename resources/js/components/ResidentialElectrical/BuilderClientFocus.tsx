@@ -7,11 +7,11 @@ const BuilderClientFocus: React.FC = () => (
     <div className={styles.content}>
       <div className={styles.textBlock + ' ' + styles.homeownersCard}>
         <h3 className={styles.subheading}>Homeowners</h3>
-        <p className={styles.text}>We provide tailored solutions for every home, whether you’re renovating, building new, or upgrading your electrical systems.</p>
+        <p className={styles.text}>From quick repairs and fault finding to full rewires, consumer unit upgrades, EV chargers and LED lighting — we deliver safe, tidy work with minimal disruption. Fully certified and insured, serving homes across Leeds & West Yorkshire.</p>
       </div>
       <div className={styles.textBlock + ' ' + styles.buildersCard}>
         <h3 className={styles.subheading}>Builders</h3>
-        <p className={styles.text}>Partner with us for reliable, code-compliant electrical work on your residential projects, delivered on time and on budget.</p>
+        <p className={styles.text}>Count on coordinated, code‑compliant electrics from first fix to final handover. We keep your schedule on track with clear communication, competitive pricing and certified electricians trusted by contractors across Leeds.</p>
       </div>
     </div>
   </section>

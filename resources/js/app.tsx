@@ -14,8 +14,8 @@ document.documentElement.classList.remove('dark');
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name: string) => resolvePageComponent(`./pages/${name}.tsx`, import.meta.glob('./pages/**/*.tsx')),
-    setup({ el, App, props }: { el: HTMLElement; App: any; props: any }) {
-        const root = createRoot(el);
+    setup({ el, App, props }) {
+        const root = createRoot(el as HTMLElement);
         root.render(<App {...props} />);
     },
     progress: {
