@@ -14,7 +14,7 @@
   z-index: 1;
 }
 .pageHero {
-  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('/images/pexels-pok-rie-33563-171428.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('/images/realimages/pexels-heyho-7031403.webp') center/cover no-repeat;
   padding: 6rem 1.5rem 5rem 1.5rem;
   min-height: 600px;
   display: flex;

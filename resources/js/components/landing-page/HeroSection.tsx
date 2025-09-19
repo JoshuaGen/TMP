@@ -1,23 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
 
-
-const carouselImages = [
-  '/images/pexels-pok-rie-33563-171428.jpg',
-  '/images/pexels-timmossholder-942316.jpg',
-  // Add more images here if desired
-];
+const backgroundImage = '/images/realimages/pexels-heyho-6238607 (1).webp';
 
 const HeroSection: React.FC = () => {
-  const [active, setActive] = useState(0);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % carouselImages.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <motion.section
       className={styles.heroSection}
@@ -27,17 +14,12 @@ const HeroSection: React.FC = () => {
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
       <div className={styles.backgroundCarousel}>
-        {carouselImages.map((src, idx) => (
-          <img
-            key={src}
-            src={src}
-            className={
-              styles.backgroundImage + ' ' + (active === idx ? styles.active : '')
-            }
-            alt="Background"
-            aria-hidden="true"
-          />
-        ))}
+        <img
+          src={backgroundImage}
+          className={styles.backgroundImage + ' ' + styles.active}
+          alt="Background"
+          aria-hidden="true"
+        />
       </div>
       <div className={styles.heroCard + ' ' + styles.mainHeroCard}>
         <h1 className={styles.heroTitle}>Get Your Free Quote</h1>

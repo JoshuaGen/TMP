@@ -5,7 +5,7 @@ import styles from './FeaturedProjects.module.css';
 const featured = [
   {
     title: 'Smart Home Transformation',
-    image: '/images/pexels-cottonbro-5090652.jpg',
+    image: '/images/realimages/536367114_17890315455336449_4204813031343417245_n.webp',
     category: 'Residential',
     location: 'Leeds',
     year: '2025',
@@ -16,7 +16,7 @@ const featured = [
   },
   {
     title: 'Commercial Lighting Upgrade',
-    image: '/images/pexels-markusspiske-1679719.jpg',
+    image: '/images/realimages/537001883_17890315485336449_4932020563970758367_n.webp',
     category: 'Commercial',
     location: 'Leeds',
     year: '2024',
@@ -27,7 +27,7 @@ const featured = [
   },
   {
     title: 'EV Charger Installation',
-    image: '/images/pexels-cottonbro-5658530.jpg',
+    image: '/images/realimages/482556962_17868580332336449_8498625874841183630_n.webp',
     category: 'Residential',
     location: 'Harrogate',
     year: '2025',

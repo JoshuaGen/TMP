@@ -38,7 +38,7 @@
   z-index: 2;
 }
 .fullyInsuredCard {
-  background: url('/images/pexels-kindelmedia-8486903.jpg') center center/cover no-repeat !important;
+  background: url('/images/realimages/537001883_17890315485336449_4932020563970758367_n.webp') center center/cover no-repeat !important;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -50,7 +50,7 @@
   z-index: 1;
 }
 .twentyFourSevenCard {
-  background: url('/images/pexels-luna-joie-3299599-16656277.jpg') center center/cover no-repeat !important;
+  background: url('/images/realimages/535884322_17890315596336449_2498266397479624570_n.webp') center center/cover no-repeat !important;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -62,7 +62,7 @@
   z-index: 1;
 }
 .satisfactionGuaranteeCard {
-  background: url('/images/pexels-gabrielrissi-22863131.jpg') center center/cover no-repeat !important;
+  background: url('/images/realimages/534314992_17890315578336449_1742589247408348776_n.webp') center center/cover no-repeat !important;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -74,7 +74,7 @@
   z-index: 1;
 }
 .certifiedElectriciansCard {
-  background: url('/images/pexels-thembaforfun-33755218.jpg') center center/cover no-repeat !important;
+  background: url('/images/realimages/472718477_17868580305336449_1426066838002443098_n.webp') center center/cover no-repeat !important;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -95,7 +95,7 @@
   color: #fff !important;
 }
 .fastResponseCard {
-  background: url('/images/pexels-markusspiske-1679719.jpg') center center/cover no-repeat !important;
+  background: url('/images/realimages/482744126_17868580335336449_3766366561199665614_n.webp') center center/cover no-repeat !important;
   position: relative;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
@@ -105,7 +105,7 @@
   z-index: 1;
 }
 .transparentPricingCard {
-  background: url('/images/pexels-bulat369-1243575272-33694019.jpg') center center/cover no-repeat;
+  background: url('/images/realimages/482556962_17868580332336449_8498625874841183630_n.webp') center center/cover no-repeat;
   color: #fff;
   position: relative;
   overflow: hidden;

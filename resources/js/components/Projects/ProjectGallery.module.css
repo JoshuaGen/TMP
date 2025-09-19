@@ -77,12 +77,12 @@
 .tileText3 { grid-area: text3; }
 
 /* Example imagery from available assets */
-.hero .media { background-image: url('/images/pexels-jplenio-2044447.jpg'); }
-.tileTall .media { background-image: url('/images/pexels-francesco-ungaro-27862195.jpg'); background-position: 60% center; }
-.tileImage .media { background-image: url('/images/pexels-dillan-teagle-336624-937548.jpg'); }
-.tileText .media { background-image: url('/images/pexels-kamenczak-775219.jpg'); filter: grayscale(0.2); }
-.tileText2 .media { background-image: url('/images/pexels-thembaforfun-33755218.jpg'); }
-.tileText3 .media { background-image: url('/images/pexels-gabrielrissi-22863131.jpg'); }
+.hero .media { background-image: url('/images/realimages/pexels-heyho-6436777.webp'); }
+.tileTall .media { background-image: url('/images/realimages/shyuinkirm1mqbpb0tdf.webp'); background-position: 60% center; }
+.tileImage .media { background-image: url('/images/realimages/pexels-hakimsatoso-5556177.webp'); }
+.tileText .media { background-image: url('/images/realimages/ovjj4vpsumbl3lpjs9nv.webp'); filter: grayscale(0.2); }
+.tileText2 .media { background-image: url('/images/realimages/pexels-heyho-7587870.webp'); }
+.tileText3 .media { background-image: url('/images/realimages/pexels-heyho-7031403.webp'); }
 
 /* Responsive */
 @media (max-width: 1024px) {
