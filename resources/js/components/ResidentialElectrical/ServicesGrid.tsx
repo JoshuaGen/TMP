@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './ServicesGrid.module.css';
 
 const services = [
-  { title: 'Re-wiring', desc: 'Upgrade or replace your home wiring for safety and efficiency.', link: '#' },
-  { title: 'Smart Homes', desc: 'Integrate smart technology for modern living.', link: '#' },
-  { title: 'LED Lighting', desc: 'Energy-saving LED lighting solutions.', link: '#' },
-  { title: 'Socket Installations', desc: 'Add or move sockets for convenience.', link: '#' },
-  { title: 'Light Switches', desc: 'Modern, safe, and stylish switches.', link: '#' },
-  { title: 'Lighting', desc: 'Indoor and outdoor lighting design and install.', link: '#' },
+  { title: 'Re-wiring', desc: 'Upgrade or replace your home wiring for safety and efficiency.', link: '/FreeQuote' },
+  { title: 'Smart Homes', desc: 'Integrate smart technology for modern living.', link: '/FreeQuote' },
+  { title: 'LED Lighting', desc: 'Energy-saving LED lighting solutions.', link: '/FreeQuote' },
+  { title: 'Socket Installations', desc: 'Add or move sockets for convenience.', link: '/FreeQuote' },
+  { title: 'Light Switches', desc: 'Modern, safe, and stylish switches.', link: '/FreeQuote' },
+  { title: 'Lighting', desc: 'Indoor and outdoor lighting design and install.', link: '/FreeQuote' },
 ];
 
 const ServicesGrid: React.FC = () => (

@@ -102,3 +102,4 @@ Route::get('TestimonialsCaseStudies', [TestimonialsCaseStudiesController::class,
 Route::get('CertificationsTesting', [CertificationsTestingController::class, 'index'])->name('certifications.testing');
 Route::get('FreeQuote', [FreeQuoteController::class, 'index'])->name('free.quote');
 Route::get('Projects', [ProjectsController::class, 'index'])->name('projects');
+Route::get('Projects/{slug}', [ProjectsController::class, 'show'])->name('projects.show');

@@ -72,16 +72,16 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
           <div className={styles.socialRow}>
-            <a className={styles.socialBtn} href="#" aria-label="Facebook">
+            <a className={styles.socialBtn} href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
               <Facebook size={18} strokeWidth={2.2} />
             </a>
-            <a className={styles.socialBtn} href="#" aria-label="Twitter">
+            <a className={styles.socialBtn} href="https://x.com" target="_blank" rel="noreferrer" aria-label="Twitter">
               <Twitter size={18} strokeWidth={2.2} />
             </a>
-            <a className={styles.socialBtn} href="#" aria-label="LinkedIn">
+            <a className={styles.socialBtn} href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <Linkedin size={18} strokeWidth={2.2} />
             </a>
-            <a className={styles.socialBtn} href="#" aria-label="Instagram">
+            <a className={styles.socialBtn} href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
               <Instagram size={18} strokeWidth={2.2} />
             </a>
           </div>

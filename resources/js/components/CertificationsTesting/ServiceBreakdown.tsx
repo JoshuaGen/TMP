@@ -5,12 +5,12 @@ const services = [
   {
     title: 'EICR for Landlords',
     desc: 'Ensure your rental properties meet legal safety standards with our comprehensive EICR testing.',
-    link: '#',
+    link: '/FreeQuote',
   },
   {
     title: 'EICR for Residents',
     desc: 'Protect your home and family with certified electrical inspections and reports.',
-    link: '#',
+    link: '/FreeQuote',
   },
 ];
 

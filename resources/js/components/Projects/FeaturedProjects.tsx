@@ -1,42 +1,7 @@
 import React from 'react';
 import { MapPin, Calendar, ArrowRight } from 'lucide-react';
 import styles from './FeaturedProjects.module.css';
-
-const featured = [
-  {
-    title: 'Smart Home Transformation',
-    image: '/images/realimages/536367114_17890315455336449_4204813031343417245_n.webp',
-    category: 'Residential',
-    location: 'Leeds',
-    year: '2025',
-    challenge: 'Outdated wiring and no smart features.',
-    solution: 'Full rewire and smart system install.',
-    outcome: 'Modern, energy-efficient home with remote control.',
-    link: '#',
-  },
-  {
-    title: 'Commercial Lighting Upgrade',
-    image: '/images/realimages/537001883_17890315485336449_4932020563970758367_n.webp',
-    category: 'Commercial',
-    location: 'Leeds',
-    year: '2024',
-    challenge: 'High energy bills and poor lighting.',
-    solution: 'LED lighting and controls upgrade.',
-    outcome: 'Lower bills and brighter workspace.',
-    link: '#',
-  },
-  {
-    title: 'EV Charger Installation',
-    image: '/images/realimages/482556962_17868580332336449_8498625874841183630_n.webp',
-    category: 'Residential',
-    location: 'Harrogate',
-    year: '2025',
-    challenge: 'Homeowner needed reliable overnight charging.',
-    solution: 'Installed 7kW wallbox with dedicated circuit and load balancing.',
-    outcome: 'Safe, fast charging with smart scheduling.',
-    link: '#',
-  },
-];
+import { projects as featured } from '../../data/projects';
 
 const FeaturedProjects: React.FC = () => (
   <section className={styles.featuredProjects} aria-labelledby="featured-heading">
@@ -73,7 +38,7 @@ const FeaturedProjects: React.FC = () => (
                 <dd>{project.outcome}</dd>
               </div>
             </dl>
-            <a href={project.link} className={styles.cardLink} aria-label={`View details for ${project.title}`}>
+            <a href={`/Projects/${project.slug}`} className={styles.cardLink} aria-label={`View details for ${project.title}`}>
               View Project Details <ArrowRight size={16} className={styles.arrow} />
             </a>
           </div>
