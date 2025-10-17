@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { projects } from '../data/projects';
+import styles from './ProjectDetail.module.css';
+import { router, Head } from '@inertiajs/react';
 
 type Props = { slug: string };
 
@@ -11,9 +13,10 @@ const ProjectDetail: React.FC<Props> = ({ slug }) => {
     return (
       <>
         <Header />
-        <main style={{ padding: '2rem', maxWidth: 900, margin: '0 auto' }}>
+        <main className={styles.container}>
           <h1>Project not found</h1>
           <p>We couldn’t find that project. Please go back to the Projects page.</p>
+          <a className={styles.backLink} href="/Projects">← Back to Projects</a>
         </main>
         <Footer />
       </>
@@ -21,33 +24,60 @@ const ProjectDetail: React.FC<Props> = ({ slug }) => {
   }
   return (
     <>
+      <Head title={`${project.title} – Projects`}>
+        <meta
+          name="description"
+          content={`${project.title} in ${project.location} (${project.year}). ${project.outcome}`}
+        />
+      </Head>
       <Header />
-      <main style={{ padding: '2rem 1rem' }}>
-        <section style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <h1 style={{ fontSize: '1.6rem', marginBottom: '0.8rem' }}>{project.title}</h1>
-          <img src={project.image} alt={project.title} style={{ width: '100%', maxHeight: 520, objectFit: 'cover', borderRadius: 12 }} />
-          <div style={{ display: 'flex', gap: 12, margin: '0.8rem 0', color: '#555' }}>
-            <span>{project.category}</span>
-            <span>•</span>
-            <span>{project.location}</span>
-            <span>•</span>
-            <span>{project.year}</span>
-          </div>
-          <div style={{ display: 'grid', gap: 10, marginTop: 14 }}>
-            <div>
-              <strong>Challenge</strong>
-              <p style={{ margin: '6px 0 0' }}>{project.challenge}</p>
+      <main className={styles.page}>
+        <div className={styles.container}>
+          <a className={styles.backLink} href="/Projects">← Back to Projects</a>
+          <section className={styles.hero} aria-label={`${project.title} hero image`}>
+            <div className={styles.heroImg} style={{ backgroundImage: `url('${project.image}')` }} />
+            <div className={styles.heroOverlay} />
+            <div className={styles.heroContent}>
+              <p className={styles.kicker}>Case study</p>
+              <h1 className={styles.title}>{project.title}</h1>
+              <div className={styles.metaRow}>
+                <span className={styles.chip}>{project.category}</span>
+                <span className={styles.chip}>{project.location}</span>
+                <span className={styles.chip}>{project.year}</span>
+              </div>
             </div>
-            <div>
-              <strong>Solution</strong>
-              <p style={{ margin: '6px 0 0' }}>{project.solution}</p>
+          </section>
+
+          <section className={styles.grid}>
+            <div className={styles.mainCol}>
+              <article className={styles.card}>
+                <h3>Challenge</h3>
+                <p className={styles.lead}>{project.challenge}</p>
+              </article>
+              <article className={styles.card}>
+                <h3>Solution</h3>
+                <p>{project.solution}</p>
+              </article>
+              <article className={styles.card}>
+                <h3>Outcome</h3>
+                <p>{project.outcome}</p>
+              </article>
             </div>
-            <div>
-              <strong>Outcome</strong>
-              <p style={{ margin: '6px 0 0' }}>{project.outcome}</p>
-            </div>
-          </div>
-        </section>
+            <aside className={styles.sidebar}>
+              <div className={styles.card}>
+                <h3>Need something similar?</h3>
+                <p>We can help with lighting upgrades, extra sockets, EV chargers, EICRs and more—done safely and neatly.</p>
+                <button
+                  className={styles.cta}
+                  onClick={() => router.visit('/FreeQuote')}
+                  aria-label="Get a free quote"
+                >
+                  Get a Free Quote
+                </button>
+              </div>
+            </aside>
+          </section>
+        </div>
       </main>
       <Footer />
     </>

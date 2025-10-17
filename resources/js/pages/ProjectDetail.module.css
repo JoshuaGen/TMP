@@ -1,0 +1,120 @@
+/* Project Detail Page Styling */
+.page { background: #fff; }
+.hero {
+  position: relative;
+  height: 440px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+.heroImg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  /* Keep the top of the image visible to avoid cutting important content */
+  background-position: center top;
+  filter: saturate(1.05);
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.05));
+}
+.heroContent {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 36px;
+  color: #fff;
+}
+.kicker {
+  margin: 0 0 6px 0;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .9;
+  font-size: .8rem;
+}
+.title {
+  font-size: 2.75rem;
+  line-height: 1.05;
+  font-weight: 800;
+  margin: 0 0 14px 0;
+}
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.chip {
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  border: 1px solid #e2e8f0;
+  padding: 8px 14px;
+  font-size: 0.92rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.container { max-width: 1280px; margin: 0 auto; padding: 3rem 1rem 3.8rem 1rem; }
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 36px;
+  margin-top: 28px;
+}
+.mainCol { display: grid; gap: 18px; }
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(30,34,40,0.08);
+  padding: 24px 26px;
+}
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  letter-spacing: .01em;
+  color: #111;
+}
+.card p {
+  margin: 10px 0 0 0;
+  color: #374151;
+  line-height: 1.8;
+}
+.sidebar {
+  position: sticky;
+  top: 16px;
+  height: fit-content;
+  display: grid;
+  gap: 16px;
+}
+.lead { font-size: 1.08rem; color: #1f2937; }
+.cta {
+  background: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  width: 100%;
+  margin-top: 12px;
+}
+.cta:hover { background: #111; border-color: #111; }
+.cta:focus-visible { outline: 2px solid #007BFF; outline-offset: 2px; }
+.backLink {
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.backLink:hover { color: #007BFF; }
+
+@media (max-width: 900px) {
+  .hero { height: 360px; }
+  .grid { grid-template-columns: 1fr; gap: 20px; }
+  .title { font-size: 2.1rem; }
+  .heroContent { padding: 26px; }
+}
