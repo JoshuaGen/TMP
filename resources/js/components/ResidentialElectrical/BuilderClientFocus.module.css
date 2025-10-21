@@ -43,7 +43,7 @@
   line-height: 1.6;
 }
 .buildersCard {
-  background: url('/images/pexels-cottonbro-5090652.jpg') center center/cover no-repeat;
+  background: url('/images/pexels-cottonbro-5090652.webp') center center/cover no-repeat;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -61,7 +61,7 @@
   z-index: 1;
 }
 .homeownersCard {
-  background: url('/images/pexels-cottonbro-3202237.jpg') center center/cover no-repeat;
+  background: url('/images/pexels-cottonbro-3202237.webp') center center/cover no-repeat;
   color: #fff;
   position: relative;
   overflow: hidden;

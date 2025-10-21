@@ -138,7 +138,7 @@ const Testimonials: React.FC = () => {
               >
                 <div className={styles.testimonialHeader}>
                   <img
-                    src={'/images/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg'}
+                    src={'/images/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.webp'}
                     alt={item.data.name}
                     className={styles.avatar}
                   />

@@ -1,5 +1,5 @@
 .ledLightingCard {
-  background: url('/images/pexels-cottonbro-5090652.jpg') center center/cover no-repeat !important;
+  background: url('/images/pexels-cottonbro-5090652.webp') center center/cover no-repeat !important;
   background-color: transparent !important;
 }
 .ledLightingCard::before {
@@ -56,7 +56,7 @@
 }
 
 .smartHomeCard {
-  background: url('/images/pexels-cottonbro-3202237.jpg') center center/cover no-repeat !important;
+  background: url('/images/pexels-cottonbro-3202237.webp') center center/cover no-repeat !important;
   background-color: transparent !important;
 }
 .smartHomeCard::before {
