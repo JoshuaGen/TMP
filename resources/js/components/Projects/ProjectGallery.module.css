@@ -32,7 +32,7 @@
 .overlay { position: absolute; inset: 0; background: linear-gradient(200deg, rgba(0,0,0,0.5), rgba(0,0,0,0.12)); }
 .overlaySoft { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.38), rgba(0,0,0,0.12)); }
 .content { position: relative; z-index: 2; color: #fff; padding: 18px; }
-.contentBottom { position: absolute; left: 0; right: 0; bottom: 62px; z-index: 2; color: #fff; padding: 18px; }
+.contentBottom { position: absolute; left: 0; right: 0; bottom: 16px; z-index: 2; color: #fff; padding: 18px; }
 .titleLg { font-size: 2.35rem; font-weight: 800; letter-spacing: 0.01em; line-height: 1.05; }
 .titleSm { font-size: 1.16rem; font-weight: 800; }
 .subtitle, .blurb { opacity: 0.9; font-size: 0.96rem; }
@@ -96,7 +96,7 @@
       "text2 text3";
   }
   .titleLg { font-size: 1.9rem; }
-  .contentBottom { bottom: 56px; }
+  .contentBottom { bottom: 16px; }
 }
 
 @media (max-width: 640px) {

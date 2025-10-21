@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, MapPin, Phone, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { MessageCircle, MapPin, Phone, Facebook, Instagram } from 'lucide-react';
 import styles from './ContactForm.module.css';
 
 type InquiryType = 'Rewire' | 'LED lighting' | 'EV charger' | 'Fault finding' | 'Electrical testing' | 'Other';
@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
             <div>
               <div className={styles.infoTitle}>Chat to us</div>
               <div className={styles.infoDesc}>Our friendly team is here to help.</div>
-              <a href="mailto:info@templeelectrical.co.uk" className={styles.infoLink}>info@templeelectrical.co.uk</a>
+              <a href="mailto:templeelectricalleeds@gmail.com" className={styles.infoLink}>templeelectricalleeds@gmail.com</a>
             </div>
           </div>
           <div className={styles.infoItem}>
@@ -68,20 +68,26 @@ const ContactForm: React.FC = () => {
             <div>
               <div className={styles.infoTitle}>Call us</div>
               <div className={styles.infoDesc}>Mon–Fri from 8am to 5pm.</div>
-              <a href="tel:+44113XXXXXXX" className={styles.infoLink}>+44 (0)113 XXX XXXX</a>
+              <a href="tel:+447526688108" className={styles.infoLink}>07526 688 8108</a>
             </div>
           </div>
           <div className={styles.socialRow}>
-            <a className={styles.socialBtn} href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+            <a
+              className={styles.socialBtn}
+              href="https://www.facebook.com/p/Temple-Electrical-61572729247115/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
               <Facebook size={18} strokeWidth={2.2} />
             </a>
-            <a className={styles.socialBtn} href="https://x.com" target="_blank" rel="noreferrer" aria-label="Twitter">
-              <Twitter size={18} strokeWidth={2.2} />
-            </a>
-            <a className={styles.socialBtn} href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <Linkedin size={18} strokeWidth={2.2} />
-            </a>
-            <a className={styles.socialBtn} href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <a
+              className={styles.socialBtn}
+              href="https://www.instagram.com/temple_electrical"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
               <Instagram size={18} strokeWidth={2.2} />
             </a>
           </div>

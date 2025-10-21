@@ -1,0 +1,52 @@
+.page {
+  background: #fff;
+  padding: 3rem 1rem 4rem;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.kicker {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: #666;
+  text-transform: uppercase;
+}
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 0.25rem 0 1rem;
+}
+.intro {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+.section {
+  background: #fff;
+  border: 1px solid rgba(17,17,17,0.08);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px rgba(30,34,40,0.06);
+}
+.section h2 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0.1rem 0 0.4rem;
+}
+.section p {
+  margin: 0.35rem 0 0.65rem;
+  line-height: 1.65;
+  color: #333;
+}
+.muted {
+  color: #666;
+}
+@media (max-width: 640px) {
+  .page { padding: 2rem 0.5rem 3rem; }
+  .title { font-size: 1.8rem; }
+}

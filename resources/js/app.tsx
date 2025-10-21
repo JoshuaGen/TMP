@@ -3,6 +3,7 @@ import '../css/app.css';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
+import CookieConsentBanner from './components/CookieConsentBanner';
 // Removed initializeTheme since we want to force light mode
 // import { initializeTheme } from './hooks/use-appearance';
 
@@ -16,7 +17,10 @@ createInertiaApp({
     resolve: (name: string) => resolvePageComponent(`./pages/${name}.tsx`, import.meta.glob('./pages/**/*.tsx')),
     setup({ el, App, props }) {
         const root = createRoot(el as HTMLElement);
-        root.render(<App {...props} />);
+                root.render(<>
+                    <App {...props} />
+                    <CookieConsentBanner />
+                </>);
     },
     progress: {
         color: '#4B5563',

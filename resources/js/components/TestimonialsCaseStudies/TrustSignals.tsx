@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 import styles from './TrustSignals.module.css';
 
 const signals = [
-  { label: 'NICEIC Approved', icon: '✔️' },
+  { label: 'NAPIT Approved', icon: '✔️' },
   { label: 'Part P Registered', icon: '✔️' },
   { label: 'Fully Insured', icon: '✔️' },
   { label: 'Local Authority Approved', icon: '✔️' },

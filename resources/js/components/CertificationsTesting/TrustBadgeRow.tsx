@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './TrustBadgeRow.module.css';
 
 const badges = [
-  { label: 'NICEIC Approved', icon: '✔️' },
+  { label: 'NAPIT Approved', icon: '✔️' },
   { label: 'Part P Registered', icon: '✔️' },
   { label: 'ECA Member', icon: '✔️' },
   { label: 'Fully Insured', icon: '✔️' },

@@ -1,39 +1,9 @@
 import { motion, easeOut } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Testimonials.module.css';
+import { googleReviews } from '../../data/googleReviews';
 
-const testimonials = [
-  {
-    name: 'Elara Voss',
-    role: 'Estate Agent',
-    text: 'Outstanding service and professionalism!',
-    avatar: '/images/testimonial-elara.jpg',
-  },
-  {
-    name: 'Liam Hargrove',
-    role: 'Builder',
-    text: 'Quick and efficient work.',
-    avatar: '/images/testimonial-liam.jpg',
-  },
-  {
-    name: 'Aurelia Kline',
-    role: 'Homeowner',
-    text: 'Highly recommended for residential needs.',
-    avatar: '/images/testimonial-aurelia.jpg',
-  },
-  {
-    name: 'Cyrus Thorne',
-    role: 'Contractor',
-    text: 'Professional and trustworthy.',
-    avatar: '/images/testimonial-cyrus.jpg',
-  },
-  {
-    name: 'Maya Chen',
-    role: 'Interior Designer',
-    text: 'Their attention to detail is unmatched. Will hire again!',
-    avatar: '/images/testimonial-maya.jpg',
-  },
-];
+const testimonials = googleReviews;
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -63,7 +33,7 @@ const Testimonials: React.FC = () => {
 
     const getSetWidth = (): number => {
       const children = track.children;
-      const n = testimonials.length;
+  const n = testimonials.length;
       if (children.length < n) return 0;
       const firstEl = children[0] as HTMLElement;
       const lastEl = children[n - 1] as HTMLElement;
@@ -141,7 +111,7 @@ const Testimonials: React.FC = () => {
   }, [repeatCount]);
 
   const repeated = Array.from({ length: repeatCount }).flatMap((_, r) =>
-    testimonials.map((t) => ({ key: `${r}-${t.name}`, data: t, tabbable: r === 0 }))
+  testimonials.map((t) => ({ key: `${r}-${t.name}`, data: t, tabbable: r === 0 }))
   );
 
   return (
@@ -168,16 +138,15 @@ const Testimonials: React.FC = () => {
               >
                 <div className={styles.testimonialHeader}>
                   <img
-                    src={item.data.avatar}
+                    src={'/images/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg'}
                     alt={item.data.name}
                     className={styles.avatar}
-                    onError={e => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/avatar-account-flat-isolated-on-transparent-background-for-graphic-and-web-design-default-social-media-profile-photo-symbol-profile-and-people-silhouette-user-icon-vector.jpg';
-                    }}
                   />
                   <div className={styles.metaText}>
                     <span className={styles.testimonialName}>{item.data.name}</span>
-                    <span className={styles.testimonialRole}>{item.data.role}</span>
+                    {item.data.date && (
+                      <span className={styles.testimonialRole}>{item.data.date}</span>
+                    )}
                   </div>
                 </div>
                 <div className={styles.testimonialDivider} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Facebook, Instagram } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const navLinks = [
@@ -9,6 +10,8 @@ const navLinks = [
   { name: 'Testimonials & Case Studies', href: '/TestimonialsCaseStudies' },
   { name: 'Projects', href: '/Projects' },
   { name: 'Free Quote', href: '/FreeQuote' },
+  { name: 'Privacy Policy', href: '/PrivacyPolicy' },
+  { name: 'Cookie Policy', href: '/CookiePolicy' },
 ];
 
 const Footer: React.FC = () => (
@@ -40,16 +43,28 @@ const Footer: React.FC = () => (
       ))}
     </div>
     <div className={styles.footerCol}>
-      <div className={styles.footerHeading}>Contact</div>
-      <div className={styles.footerContact}>0113 123 4567</div>
-      <div className={styles.footerContact}>info@templeelectrical.co.uk</div>
+  <div className={styles.footerHeading}>Contact</div>
+  <div className={styles.footerContact}><a href="tel:+447526688108" className={styles.footerLink}>07526 688 8108</a></div>
+  <div className={styles.footerContact}><a href="mailto:templeelectricalleeds@gmail.com" className={styles.footerLink}>templeelectricalleeds@gmail.com</a></div>
       <div className={styles.footerContact}>Leeds, West Yorkshire</div>
       <a href="/FreeQuote" className={styles.footerCta}>Free Quote</a>
       <div className={styles.socialIcons}>
-        {/* Example social icons (replace with SVGs or icon components as needed) */}
-        <span className={styles.socialIcon}>F</span>
-        <span className={styles.socialIcon}>T</span>
-        <span className={styles.socialIcon}>I</span>
+        <a
+          href="https://www.facebook.com/p/Temple-Electrical-61572729247115/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Facebook"
+        >
+          <Facebook className={styles.socialIcon} size={20} strokeWidth={2.2} />
+        </a>
+        <a
+          href="https://www.instagram.com/temple_electrical"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram"
+        >
+          <Instagram className={styles.socialIcon} size={20} strokeWidth={2.2} />
+        </a>
       </div>
     </div>
   </motion.footer>

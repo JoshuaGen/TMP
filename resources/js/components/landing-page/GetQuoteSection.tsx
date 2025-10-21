@@ -28,7 +28,7 @@ const GetQuoteSection: React.FC = () => (
           <input className={styles.input} type="text" placeholder="Last name" />
         </div>
         <input className={styles.input} type="email" placeholder="Email" />
-        <textarea className={styles.textarea} placeholder="Placeholder" rows={3} />
+  <textarea className={styles.textarea} placeholder="How can we help?" rows={3} />
         <button className={styles.submitBtn} type="submit">Submit</button>
       </form>
     </div>
