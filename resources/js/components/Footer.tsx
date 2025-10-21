@@ -10,8 +10,6 @@ const navLinks = [
   { name: 'Testimonials & Case Studies', href: '/TestimonialsCaseStudies' },
   { name: 'Projects', href: '/Projects' },
   { name: 'Free Quote', href: '/FreeQuote' },
-  { name: 'Privacy Policy', href: '/PrivacyPolicy' },
-  { name: 'Cookie Policy', href: '/CookiePolicy' },
 ];
 
 const Footer: React.FC = () => (
@@ -32,6 +30,10 @@ const Footer: React.FC = () => (
       </div>
       <div className={styles.footerDesc}>
         Temple Electrical – Professional, responsive, and local electrical services in Leeds & West Yorkshire.
+      </div>
+      <div style={{ marginTop: '1.2rem', display: 'flex', gap: '1rem' }}>
+        <a href="/PrivacyPolicy" className={styles.footerLink}>Privacy Policy</a>
+        <a href="/CookiePolicy" className={styles.footerLink}>Cookie Policy</a>
       </div>
     </div>
     <div className={styles.footerCol}>
