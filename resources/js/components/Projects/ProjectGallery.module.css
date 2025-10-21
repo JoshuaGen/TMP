@@ -77,10 +77,10 @@
 .tileText3 { grid-area: text3; }
 
 /* Example imagery from available assets */
-.hero .media { background-image: url('/images/realimages/pexels-heyho-6436777.webp'); }
+.hero .media { background-image: url('/images/realimages/pexels-picjumbo-com-55570-225232.webp'); }
 .tileTall .media { background-image: url('/images/realimages/shyuinkirm1mqbpb0tdf.webp'); background-position: 60% center; }
 .tileImage .media { background-image: url('/images/realimages/pexels-hakimsatoso-5556177.webp'); }
-.tileText .media { background-image: url('/images/realimages/ovjj4vpsumbl3lpjs9nv.webp'); filter: grayscale(0.2); }
+.tileText .media { background-image: url('/images/realimages/pexels-andersen-ev-1587213396-27355820.webp'); filter: grayscale(0.2); }
 .tileText2 .media { background-image: url('/images/realimages/pexels-heyho-7587870.webp'); }
 .tileText3 .media { background-image: url('/images/realimages/pexels-heyho-7031403.webp'); }
 
