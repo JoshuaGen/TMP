@@ -51,6 +51,17 @@ Route::get('register', [RegisterController::class, 'index'])->middleware(GuestMi
 
 /*
 |--------------------------------------------------------------------------
+| This controller handles Contact Form Submissions
+|--------------------------------------------------------------------------
+*/
+
+use App\Http\Controllers\ContactController;
+
+Route::post('contact', [ContactController::class, 'submit'])->name('contact.submit');
+Route::post('quick-quote', [ContactController::class, 'quickQuote'])->name('contact.quickQuote');
+
+/*
+|--------------------------------------------------------------------------
 | This controller handles All Admin Logic
 |--------------------------------------------------------------------------
 */

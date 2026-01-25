@@ -1,34 +1,41 @@
 import React, { useState } from 'react';
 import { MessageCircle, MapPin, Phone, Facebook, Instagram } from 'lucide-react';
+import { useForm } from '@inertiajs/react';
 import styles from './ContactForm.module.css';
 
 type InquiryType = 'Rewire' | 'LED lighting' | 'EV charger' | 'Fault finding' | 'Electrical testing' | 'Other';
 
 const ContactForm: React.FC = () => {
-  const [form, setForm] = useState({
+  const { data, setData, post, processing, errors, reset } = useForm({
     name: '',
     email: '',
     message: '',
     inquiry: [] as InquiryType[],
     newsletter: false,
+    formType: 'contact',
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const toggleInquiry = (type: InquiryType) => {
-    setForm((prev) => {
-      const exists = prev.inquiry.includes(type);
-      return { ...prev, inquiry: exists ? prev.inquiry.filter(i => i !== type) : [...prev.inquiry, type] };
-    });
+    const exists = data.inquiry.includes(type);
+    setData('inquiry', exists ? data.inquiry.filter(i => i !== type) : [...data.inquiry, type]);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type, checked } = e.target as HTMLInputElement;
-    setForm((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
+    setData(name as any, type === 'checkbox' ? checked : value);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: integrate with backend or email service
-    console.log('Contact form submitted', form);
+    post(route('contact.submit'), {
+      onSuccess: () => {
+        setSubmitted(true);
+        reset();
+        setTimeout(() => setSubmitted(false), 5000);
+      },
+    });
   };
 
   const inquiryOptions: InquiryType[] = ['Rewire', 'LED lighting', 'EV charger', 'Fault finding', 'Electrical testing', 'Other'];
@@ -96,13 +103,24 @@ const ContactForm: React.FC = () => {
         <form id="quote-form" className={styles.formCard} onSubmit={handleSubmit}>
           <h2 className={styles.formTitle}>Got ideas? We’ve got the skills. Let’s team up.</h2>
           <p className={styles.formSubtitle}>Tell us more about yourself and what you’ve got in mind.</p>
+          
+          {submitted && (
+            <div style={{ padding: '12px', backgroundColor: '#d4edda', color: '#155724', borderRadius: '4px', marginBottom: '16px', border: '1px solid #c3e6cb' }}>
+              Thank you for your message! We'll get back to you within 24 hours.
+            </div>
+          )}
+
+          {errors.name && <div style={{ color: 'red', fontSize: '14px', marginBottom: '8px' }}>{errors.name}</div>}
+          {errors.email && <div style={{ color: 'red', fontSize: '14px', marginBottom: '8px' }}>{errors.email}</div>}
+          {errors.message && <div style={{ color: 'red', fontSize: '14px', marginBottom: '8px' }}>{errors.message}</div>}
+
           <div className={styles.fieldGroup}>
             <label htmlFor="name">Your name</label>
-            <input type="text" id="name" name="name" value={form.name} onChange={handleChange} required />
+            <input type="text" id="name" name="name" value={data.name} onChange={handleChange} required />
           </div>
           <div className={styles.fieldGroup}>
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" value={form.email} onChange={handleChange} required />
+            <input type="email" id="email" name="email" value={data.email} onChange={handleChange} required />
           </div>
 
           <div className={styles.fieldGroup + ' ' + styles.sectionDivider}>
@@ -112,7 +130,7 @@ const ContactForm: React.FC = () => {
                 <label key={opt} className={styles.checkboxItem}>
                   <input
                     type="checkbox"
-                    checked={form.inquiry.includes(opt)}
+                    checked={data.inquiry.includes(opt)}
                     onChange={() => toggleInquiry(opt)}
                   />
                   <span>{opt}</span>
@@ -123,15 +141,17 @@ const ContactForm: React.FC = () => {
 
           <div className={styles.fieldGroup}>
             <label htmlFor="message">Tell us a little about the project…</label>
-            <textarea id="message" name="message" value={form.message} onChange={handleChange} rows={6} />
+            <textarea id="message" name="message" value={data.message} onChange={handleChange} rows={6} />
           </div>
 
           <label className={styles.checkRow}>
-            <input type="checkbox" name="newsletter" checked={form.newsletter} onChange={handleChange} />
+            <input type="checkbox" name="newsletter" checked={data.newsletter} onChange={handleChange} />
             <span>Subscribe to occasional updates and tips</span>
           </label>
 
-          <button type="submit" className={styles.submitButton}>Let’s get started!</button>
+          <button type="submit" className={styles.submitButton} disabled={processing}>
+            {processing ? 'Sending...' : "Let's get started!"}
+          </button>
         </form>
       </div>
     </section>
