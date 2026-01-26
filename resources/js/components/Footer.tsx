@@ -46,7 +46,7 @@ const Footer: React.FC = () => (
     </div>
     <div className={styles.footerCol}>
   <div className={styles.footerHeading}>Contact</div>
-  <div className={styles.footerContact}><a href="tel:+447526688108" className={styles.footerLink}>07526 688 8108</a></div>
+  <div className={styles.footerContact}><a href="tel:+447526688808" className={styles.footerLink}>+44 7526 688808</a></div>
   <div className={styles.footerContact}><a href="mailto:templeelectricalleeds@gmail.com" className={styles.footerLink}>templeelectricalleeds@gmail.com</a></div>
       <div className={styles.footerContact}>Leeds, West Yorkshire</div>
       <a href="/FreeQuote" className={styles.footerCta}>Free Quote</a>
